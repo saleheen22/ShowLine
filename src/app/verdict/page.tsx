@@ -18,11 +18,47 @@ const DOT_COLOR: Record<string, string> = {
   green: "bg-green-600",
 };
 
+const VERDICT_THEME: Record<string, { border: string; from: string; ring: string; dot: string; text: string }> = {
+  red:   { border: "border-red-300",   from: "from-red-50",   ring: "ring-red-200",   dot: "bg-red-600",   text: "text-red-700" },
+  amber: { border: "border-amber-300", from: "from-amber-50", ring: "ring-amber-200", dot: "bg-amber-500", text: "text-amber-700" },
+  green: { border: "border-green-300", from: "from-green-50", ring: "ring-green-200", dot: "bg-green-600", text: "text-green-700" },
+};
+
+const CATEGORY_LABEL: Record<string, string> = {
+  seed: "Seed",
+  fertilizer: "Fertilizer",
+  crop_protection: "Crop protection",
+  irrigation: "Irrigation",
+  crop_insurance: "Crop insurance",
+};
+
 export default function VerdictPage() {
   const scenario = useActiveScenario();
+
+  if (!scenario) {
+    return (
+      <main className="min-h-screen bg-stone-50 px-6 py-10">
+        <div className="mx-auto max-w-md text-center">
+          <Wordmark subtle />
+          <p className="mt-10 text-sm text-stone-600">
+            No analysis loaded yet. Upload a quote first.
+          </p>
+          <Link
+            href="/upload"
+            className="mt-6 inline-block rounded-lg bg-green-800 px-5 py-3 text-sm font-semibold text-white hover:bg-green-900"
+          >
+            Upload a quote
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
   const v = scenario.verdict;
   const tomQuote = scenario.quote;
   const why = v.why_panel;
+  const theme = VERDICT_THEME[v.color] ?? VERDICT_THEME.amber;
+  const primaryTheme = VERDICT_THEME[why.primary_finding.status_color] ?? VERDICT_THEME.red;
 
   return (
     <main className="min-h-screen bg-stone-50 px-6 py-8 pb-24">
@@ -34,17 +70,17 @@ export default function VerdictPage() {
           </Link>
         </header>
 
-        <section className="rounded-2xl border-2 border-amber-300 bg-gradient-to-b from-amber-50 to-white p-5 shadow-sm">
+        <section className={`rounded-2xl border-2 ${theme.border} bg-gradient-to-b ${theme.from} to-white p-5 shadow-sm`}>
           <div className="flex items-center gap-2">
-            <span className="inline-block h-2.5 w-2.5 rounded-full bg-amber-500" />
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-700">
+            <span className={`inline-block h-2.5 w-2.5 rounded-full ${theme.dot}`} />
+            <span className={`text-xs font-bold uppercase tracking-widest ${theme.text}`}>
               {v.verdict}
             </span>
           </div>
           <h2 className="mt-2 font-serif text-3xl leading-tight text-stone-900">
             {v.headline}
           </h2>
-          <div className="mt-4 rounded-lg bg-white/70 p-3 ring-1 ring-amber-200">
+          <div className={`mt-4 rounded-lg bg-white/70 p-3 ring-1 ${theme.ring}`}>
             <div className="text-xs uppercase tracking-wide text-stone-500">
               Estimated overpayment
             </div>
@@ -77,11 +113,13 @@ export default function VerdictPage() {
 
         <section className="mt-6">
           <h3 className="font-serif text-lg text-stone-900">Why</h3>
-          <div className="mt-3 rounded-xl border-l-4 border-red-500 bg-white p-4 shadow-sm ring-1 ring-stone-200">
-            <div className="text-[10px] font-semibold uppercase tracking-wide text-red-700">
+          <div className={`mt-3 rounded-xl border-l-4 ${primaryTheme.border.replace("border-", "border-l-")} bg-white p-4 shadow-sm ring-1 ring-stone-200`}>
+            <div className={`text-[10px] font-semibold uppercase tracking-wide ${primaryTheme.text}`}>
               Primary finding
             </div>
-            <div className="mt-1 text-lg font-semibold text-stone-900">Fertilizer</div>
+            <div className="mt-1 text-lg font-semibold text-stone-900">
+              {CATEGORY_LABEL[why.primary_finding.category] ?? why.primary_finding.category}
+            </div>
             <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
               <span className="text-stone-500">Your quote</span>
               <span className="text-right font-mono font-semibold text-stone-900">
@@ -95,11 +133,12 @@ export default function VerdictPage() {
               <span className="text-right font-mono text-stone-700">
                 {formatUSD(why.primary_finding.mu_extension_per_acre, { cents: true })}/ac
               </span>
-              <span className="border-t border-stone-200 pt-1 font-semibold text-red-700">
+              <span className={`border-t border-stone-200 pt-1 font-semibold ${primaryTheme.text}`}>
                 Gap
               </span>
-              <span className="border-t border-stone-200 pt-1 text-right font-mono font-bold text-red-700">
-                +{formatUSD(why.primary_finding.gap_per_acre, { cents: true })}/ac · {formatUSD(why.primary_finding.gap_full_operation)}
+              <span className={`border-t border-stone-200 pt-1 text-right font-mono font-bold ${primaryTheme.text}`}>
+                {why.primary_finding.gap_per_acre > 0 ? "+" : ""}
+                {formatUSD(why.primary_finding.gap_per_acre, { cents: true })}/ac · {formatUSD(why.primary_finding.gap_full_operation)}
               </span>
             </div>
             <div className="mt-3 text-[10px] text-stone-500">

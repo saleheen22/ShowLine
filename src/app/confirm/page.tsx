@@ -19,6 +19,26 @@ export default function ConfirmPage() {
   const router = useRouter();
   const [analyzing, setAnalyzing] = useState(false);
   const scenario = useActiveScenario();
+
+  if (!scenario) {
+    return (
+      <main className="min-h-screen bg-stone-50 px-6 py-10">
+        <div className="mx-auto max-w-md text-center">
+          <Wordmark subtle />
+          <p className="mt-10 text-sm text-stone-600">
+            No quote loaded yet. Upload one to get started.
+          </p>
+          <Link
+            href="/upload"
+            className="mt-6 inline-block rounded-lg bg-green-800 px-5 py-3 text-sm font-semibold text-white hover:bg-green-900"
+          >
+            Upload a quote
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
   const tomQuote = scenario.quote;
 
   function runAnalysis() {

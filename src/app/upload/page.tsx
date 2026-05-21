@@ -5,9 +5,9 @@ import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { db } from "@/lib/db";
 import {
-  clearActiveScenario,
-  detectScenarioFromFilename,
-  setActiveScenario,
+  clearActiveAnalysis,
+  setActiveAnalysis,
+  type AIAnalysis,
 } from "@/lib/activeQuote";
 import { Wordmark } from "@/components/Wordmark";
 
@@ -16,20 +16,45 @@ export default function UploadPage() {
   const router = useRouter();
   const [reading, setReading] = useState(false);
   const [filename, setFilename] = useState<string | null>(null);
+  const [statusText, setStatusText] = useState<string>(ui.sarah_reading);
+  const [error, setError] = useState<string | null>(null);
   const photoInputRef = useRef<HTMLInputElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  function onFileChosen(e: React.ChangeEvent<HTMLInputElement>) {
+  async function onFileChosen(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
-    clearActiveScenario();
-    const scenarioId = detectScenarioFromFilename(file.name);
-    setActiveScenario(scenarioId);
+    setError(null);
+    clearActiveAnalysis();
     setFilename(file.name);
     setReading(true);
-    setTimeout(() => {
+    setStatusText("Uploading your quote…");
+
+    const form = new FormData();
+    form.append("file", file);
+
+    try {
+      setStatusText("Sarah is reading your quote and comparing 28 SE Missouri farms…");
+      const res = await fetch("/api/analyze", { method: "POST", body: form });
+      const data = (await res.json()) as
+        | { analysis: AIAnalysis; model: string }
+        | { error: string; detail?: string };
+
+      if (!res.ok || "error" in data) {
+        const msg = "error" in data ? data.error : `Server returned ${res.status}`;
+        const detail = "error" in data && data.detail ? ` — ${data.detail}` : "";
+        throw new Error(msg + detail);
+      }
+
+      setActiveAnalysis(data.analysis);
+      setStatusText("Got it. Showing your verdict…");
       router.push("/confirm");
-    }, 5000);
+    } catch (err) {
+      setReading(false);
+      setError((err as Error).message);
+    } finally {
+      if (e.target) e.target.value = "";
+    }
   }
 
   if (reading) {
@@ -61,9 +86,7 @@ export default function UploadPage() {
                 {filename}
               </div>
             )}
-            <p className="mt-2 text-center text-sm text-stone-700">
-              {ui.sarah_reading}
-            </p>
+            <p className="mt-2 text-center text-sm text-stone-700">{statusText}</p>
             <div className="mt-3 flex items-center justify-center gap-1.5">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-700" />
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-700 [animation-delay:200ms]" />
@@ -90,6 +113,16 @@ export default function UploadPage() {
 
         <h2 className="font-serif text-2xl text-stone-900">Upload your quote</h2>
         <p className="mt-2 text-sm text-stone-600">{ui.upload_helper}</p>
+
+        {error && (
+          <div className="mt-4 rounded-md border border-red-300 bg-red-50 p-3 text-sm text-red-800">
+            <div className="font-semibold">Couldn&apos;t analyze that file</div>
+            <div className="mt-1 text-xs leading-relaxed">{error}</div>
+            <div className="mt-2 text-[11px] text-red-700/80">
+              Check that OPENROUTER_API_KEY is set in .env.local and the dev server has been restarted.
+            </div>
+          </div>
+        )}
 
         <input
           ref={photoInputRef}

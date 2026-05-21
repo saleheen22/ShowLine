@@ -5,10 +5,40 @@ import { db, formatUSD } from "@/lib/db";
 import { useActiveScenario } from "@/lib/activeQuote";
 import { Wordmark } from "@/components/Wordmark";
 
+type PeerByCategory = typeof db.peer_benchmarks_aggregated.by_category;
+type PeerCategoryKey = keyof PeerByCategory;
 const peer = db.peer_benchmarks_aggregated.by_category;
+
+const CATEGORY_LABEL: Record<string, string> = {
+  seed: "Seed",
+  fertilizer: "Fertilizer",
+  crop_protection: "Crop protection",
+  irrigation: "Irrigation",
+  crop_insurance: "Crop insurance",
+};
 
 export default function ReportPage() {
   const scenario = useActiveScenario();
+
+  if (!scenario) {
+    return (
+      <main className="min-h-screen bg-stone-50 px-6 py-10">
+        <div className="mx-auto max-w-2xl text-center">
+          <Wordmark subtle />
+          <p className="mt-10 text-sm text-stone-600">
+            No analysis loaded yet. Upload a quote first.
+          </p>
+          <Link
+            href="/upload"
+            className="mt-6 inline-block rounded-lg bg-green-800 px-5 py-3 text-sm font-semibold text-white hover:bg-green-900"
+          >
+            Upload a quote
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
   const tomReport = scenario.report;
   const tomVerdict = scenario.verdict;
   const tomQuote = scenario.quote;
@@ -117,8 +147,24 @@ export default function ReportPage() {
             </div>
           </section>
 
-          <section className="mt-6 rounded-lg border-l-4 border-amber-500 bg-amber-50/60 p-5">
-            <div className="text-[10px] font-bold uppercase tracking-widest text-amber-700">
+          <section
+            className={`mt-6 rounded-lg border-l-4 p-5 ${
+              tomVerdict.color === "red"
+                ? "border-red-500 bg-red-50/60"
+                : tomVerdict.color === "green"
+                  ? "border-green-500 bg-green-50/60"
+                  : "border-amber-500 bg-amber-50/60"
+            }`}
+          >
+            <div
+              className={`text-[10px] font-bold uppercase tracking-widest ${
+                tomVerdict.color === "red"
+                  ? "text-red-700"
+                  : tomVerdict.color === "green"
+                    ? "text-green-700"
+                    : "text-amber-700"
+              }`}
+            >
               Verdict
             </div>
             <div className="mt-1 font-serif text-2xl text-stone-900">
@@ -140,24 +186,20 @@ export default function ReportPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-stone-200">
-                {Object.entries(peer).map(([key, c]) => {
+                {(Object.entries(peer) as Array<[PeerCategoryKey, PeerByCategory[PeerCategoryKey]]>).map(([key, c]) => {
                   const yourLine = tomQuote.line_items.find((li) => li.category === key);
-                  const yours = yourLine?.price_per_acre ?? c.your_quote_per_acre;
+                  if (!yourLine) return null;
+                  const yours = yourLine.price_per_acre;
                   const gap = yours - c.peer_paid.median;
-                  const label =
-                    key === "seed"
-                      ? "Seed"
-                      : key === "fertilizer"
-                        ? "Fertilizer"
-                        : key === "crop_protection"
-                          ? "Crop protection"
-                          : key === "irrigation"
-                            ? "Irrigation"
-                            : "Crop insurance";
+                  const label = CATEGORY_LABEL[key] ?? key;
+                  const aiAssessment = scenario.ai.category_assessments.find(
+                    (a) => a.category === key,
+                  );
+                  const aiStatus = aiAssessment?.status_color ?? (gap > 5 ? "red" : gap > 0 ? "amber" : "green");
                   const statusColor =
-                    c.status_color === "red"
+                    aiStatus === "red"
                       ? "text-red-700"
-                      : c.status_color === "amber"
+                      : aiStatus === "amber"
                         ? "text-amber-700"
                         : "text-green-700";
                   return (
@@ -181,7 +223,7 @@ export default function ReportPage() {
                       <td
                         className={`px-2 py-2 text-right text-[11px] font-semibold uppercase ${statusColor}`}
                       >
-                        {c.status_color}
+                        {aiStatus}
                       </td>
                     </tr>
                   );
