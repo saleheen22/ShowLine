@@ -4,6 +4,11 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { db } from "@/lib/db";
+import {
+  clearActiveScenario,
+  detectScenarioFromFilename,
+  setActiveScenario,
+} from "@/lib/activeQuote";
 import { Wordmark } from "@/components/Wordmark";
 
 export default function UploadPage() {
@@ -17,6 +22,9 @@ export default function UploadPage() {
   function onFileChosen(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
+    clearActiveScenario();
+    const scenarioId = detectScenarioFromFilename(file.name);
+    setActiveScenario(scenarioId);
     setFilename(file.name);
     setReading(true);
     setTimeout(() => {

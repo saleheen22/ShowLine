@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { db, tomQuote, formatUSD } from "@/lib/db";
+import { db, formatUSD } from "@/lib/db";
+import { useActiveScenario } from "@/lib/activeQuote";
 import { Wordmark } from "@/components/Wordmark";
 
 const CATEGORY_LABEL: Record<string, string> = {
@@ -17,6 +18,8 @@ const CATEGORY_LABEL: Record<string, string> = {
 export default function ConfirmPage() {
   const router = useRouter();
   const [analyzing, setAnalyzing] = useState(false);
+  const scenario = useActiveScenario();
+  const tomQuote = scenario.quote;
 
   function runAnalysis() {
     setAnalyzing(true);

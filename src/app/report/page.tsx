@@ -1,18 +1,24 @@
+"use client";
+
 import Link from "next/link";
-import {
-  db,
-  tomReport,
-  tomVerdict,
-  tomQuote,
-  muellerFarm,
-  tom,
-  formatUSD,
-} from "@/lib/db";
+import { db, formatUSD } from "@/lib/db";
+import { useActiveScenario } from "@/lib/activeQuote";
 import { Wordmark } from "@/components/Wordmark";
 
 const peer = db.peer_benchmarks_aggregated.by_category;
 
 export default function ReportPage() {
+  const scenario = useActiveScenario();
+  const tomReport = scenario.report;
+  const tomVerdict = scenario.verdict;
+  const tomQuote = scenario.quote;
+  const tom = { display_name: scenario.farmer_name };
+  const muellerFarm = {
+    internal_name: scenario.farm_internal_name,
+    county: scenario.county,
+    state: scenario.state,
+    total_acres: scenario.total_acres,
+  };
   return (
     <main className="min-h-screen bg-stone-100 px-4 py-8 pb-24 print:bg-white print:py-0">
       <div className="mx-auto max-w-2xl print:max-w-none">
@@ -135,7 +141,9 @@ export default function ReportPage() {
               </thead>
               <tbody className="divide-y divide-stone-200">
                 {Object.entries(peer).map(([key, c]) => {
-                  const gap = c.your_quote_per_acre - c.peer_paid.median;
+                  const yourLine = tomQuote.line_items.find((li) => li.category === key);
+                  const yours = yourLine?.price_per_acre ?? c.your_quote_per_acre;
+                  const gap = yours - c.peer_paid.median;
                   const label =
                     key === "seed"
                       ? "Seed"
@@ -156,7 +164,7 @@ export default function ReportPage() {
                     <tr key={key} className="text-stone-800">
                       <td className="px-2 py-2">{label}</td>
                       <td className="px-2 py-2 text-right font-mono">
-                        {formatUSD(c.your_quote_per_acre, { cents: true })}
+                        {formatUSD(yours, { cents: true })}
                       </td>
                       <td className="px-2 py-2 text-right font-mono text-stone-600">
                         {formatUSD(c.peer_paid.median, { cents: true })}
@@ -184,11 +192,11 @@ export default function ReportPage() {
                     {formatUSD(tomQuote.total_quoted_per_acre, { cents: true })}
                   </td>
                   <td className="px-2 py-2 text-right font-mono text-stone-600" colSpan={2}>
-                    {formatUSD(603, { cents: true })}{" "}
+                    {formatUSD(tomQuote.total_quoted_per_acre - tomVerdict.estimated_overpayment_per_acre, { cents: true })}{" "}
                     <span className="font-normal text-[10px] text-stone-500">if negotiated</span>
                   </td>
                   <td className="px-2 py-2 text-right font-mono text-red-700">
-                    +{formatUSD(55, { cents: true })}
+                    +{formatUSD(tomVerdict.estimated_overpayment_per_acre, { cents: true })}
                   </td>
                   <td />
                 </tr>
@@ -222,7 +230,7 @@ export default function ReportPage() {
                 If negotiated
               </div>
               <div className="mt-1 font-mono text-2xl font-bold text-green-800">
-                +{formatUSD(33000)}
+                +{formatUSD(tomVerdict.estimated_overpayment_dollars)}
               </div>
               <div className="text-[10px] text-green-700">added to season margin</div>
             </div>

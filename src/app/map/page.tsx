@@ -58,7 +58,9 @@ const CATEGORY_LABEL: Record<string, string> = {
   crop_insurance: "Crop insurance",
 };
 
-const TOM_PRICES: Record<string, number> = {
+type CategoryKey = "seed" | "fertilizer" | "crop_protection" | "irrigation" | "crop_insurance";
+
+const TOM_PRICES: Record<CategoryKey, number> = {
   seed: 125,
   fertilizer: 360,
   crop_protection: 98,

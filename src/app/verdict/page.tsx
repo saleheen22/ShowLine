@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { tomVerdict, tomQuote, formatUSD } from "@/lib/db";
+import { formatUSD } from "@/lib/db";
+import { useActiveScenario } from "@/lib/activeQuote";
 import { Wordmark } from "@/components/Wordmark";
 
 const TILE_TINT: Record<string, string> = {
@@ -16,7 +19,9 @@ const DOT_COLOR: Record<string, string> = {
 };
 
 export default function VerdictPage() {
-  const v = tomVerdict;
+  const scenario = useActiveScenario();
+  const v = scenario.verdict;
+  const tomQuote = scenario.quote;
   const why = v.why_panel;
 
   return (
