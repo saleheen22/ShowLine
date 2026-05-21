@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MFA Agronomy — Input Program Quote — Mueller Family Farms — Q26-03-1418</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 0.45in 0.5in 0.5in 0.5in;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+    color: #1c1c1c;
+    font-size: 9.5pt;
+    line-height: 1.32;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ---------- letterhead ---------- */
+  .letterhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid #1f3a5f;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-mark {
+    width: 54px;
+    height: 54px;
+    background: #1f3a5f;
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 26pt;
+    letter-spacing: -1px;
+  }
+  .brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20pt;
+    font-weight: 700;
+    color: #1f3a5f;
+    letter-spacing: -0.3px;
+    line-height: 1;
+  }
+  .brand-tagline {
+    font-size: 8.5pt;
+    color: #555;
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  .branch-info {
+    text-align: right;
+    font-size: 8.5pt;
+    color: #333;
+    line-height: 1.35;
+  }
+  .branch-info strong {
+    color: #1f3a5f;
+    font-size: 9.5pt;
+  }
+
+  /* ---------- document title ---------- */
+  .doc-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2px 0 12px 0;
+  }
+  .doc-title {
+    font-size: 14.5pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #1f3a5f;
+    text-transform: uppercase;
+  }
+  .doc-meta {
+    font-size: 8.5pt;
+    color: #666;
+  }
+
+  /* ---------- info blocks ---------- */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .info-card {
+    border: 1px solid #d0d4da;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .info-card-header {
+    background: #f0f3f7;
+    color: #1f3a5f;
+    font-weight: 700;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    border-bottom: 1px solid #d0d4da;
+  }
+  .info-card-body {
+    padding: 6px 8px;
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 0;
+  }
+  .info-row span:first-child { color: #555; }
+  .info-row span:last-child  { font-weight: 600; }
+
+  /* ---------- program banner ---------- */
+  .program-banner {
+    background: #1f3a5f;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 10pt;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .program-banner .right { font-weight: 400; opacity: 0.92; }
+
+  /* ---------- line item tables ---------- */
+  .category {
+    margin-bottom: 9px;
+    page-break-inside: avoid;
+  }
+  .category-title {
+    background: #e6ecf3;
+    padding: 3px 8px;
+    font-size: 9pt;
+    font-weight: 700;
+    color: #1f3a5f;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-left: 3px solid #1f3a5f;
+  }
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2px;
+  }
+  table.items th {
+    text-align: left;
+    font-size: 7.8pt;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 1px solid #c8cdd4;
+    padding: 3px 6px;
+    font-weight: 600;
+  }
+  table.items td {
+    padding: 3px 6px;
+    border-bottom: 1px solid #ececec;
+    vertical-align: top;
+    font-size: 9pt;
+  }
+  table.items td.num,
+  table.items th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  table.items td.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 8.4pt; color: #444; }
+  table.items td.desc strong { color: #1c1c1c; }
+  table.items td.desc small { color: #666; font-size: 8.2pt; display: block; margin-top: 1px; }
+  table.items tr.subtotal td {
+    border-top: 1px solid #1f3a5f;
+    border-bottom: none;
+    background: #f8f9fb;
+    font-weight: 700;
+    font-size: 9.2pt;
+    padding-top: 4px;
+  }
+
+  /* ---------- summary block ---------- */
+  .summary-wrap {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .summary-notes {
+    flex: 1.4;
+    border: 1px solid #d0d4da;
+    border-radius: 3px;
+    padding: 7px 10px;
+    font-size: 8.5pt;
+    line-height: 1.45;
+    color: #333;
+  }
+  .summary-notes h4 {
+    margin: 0 0 4px 0;
+    color: #1f3a5f;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .summary-totals {
+    flex: 1;
+    border: 1.5px solid #1f3a5f;
+    border-radius: 3px;
+    padding: 7px 10px;
+    background: #fafbfd;
+  }
+  .summary-totals .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    font-size: 9pt;
+  }
+  .summary-totals .row.total {
+    border-top: 2px solid #1f3a5f;
+    margin-top: 5px;
+    padding-top: 6px;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #1f3a5f;
+  }
+  .summary-totals .row.subtle { color: #555; font-size: 8.5pt; }
+
+  /* ---------- signature ---------- */
+  .signature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+    font-size: 8.5pt;
+  }
+  .sigline {
+    border-bottom: 1px solid #555;
+    height: 28px;
+    margin-bottom: 3px;
+  }
+  .sig-label { color: #555; }
+
+  /* ---------- footer ---------- */
+  .footer {
+    margin-top: 14px;
+    padding-top: 6px;
+    border-top: 1px solid #c8cdd4;
+    font-size: 7.5pt;
+    color: #777;
+    line-height: 1.4;
+  }
+  .stamp {
+    position: absolute;
+    top: 165px;
+    right: 38px;
+    transform: rotate(-8deg);
+    border: 2px solid #9c2424;
+    color: #9c2424;
+    padding: 4px 12px;
+    font-weight: 700;
+    font-size: 11pt;
+    letter-spacing: 1.5px;
+    opacity: 0.78;
+    border-radius: 2px;
+    font-family: Georgia, serif;
+  }
+</style>
+</head>
+<body>
+
+  <div class="stamp">QUOTE — NOT AN INVOICE</div>
+
+  <!-- ============== LETTERHEAD ============== -->
+  <div class="letterhead">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div>
+        <div class="brand-name">MFA Incorporated</div>
+        <div class="brand-tagline">Agri Services &middot; Sikeston Branch</div>
+      </div>
+    </div>
+    <div class="branch-info">
+      <strong>MFA Agri Services — Sikeston</strong><br>
+      1408 S. Main Street<br>
+      Sikeston, MO 63801<br>
+      Office (573) 471-2540 &middot; Fax (573) 471-7188<br>
+      sikeston.agronomy@mfa-inc.example
+    </div>
+  </div>
+
+  <!-- ============== TITLE ============== -->
+  <div class="doc-title-row">
+    <div class="doc-title">2026 Input Program Quote</div>
+    <div class="doc-meta">Page 1 of 1 &middot; Generated 03/12/2026 09:14 CST</div>
+  </div>
+
+  <!-- ============== INFO CARDS ============== -->
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-card-header">Quoted To</div>
+      <div class="info-card-body">
+        <strong>Mueller Family Farms</strong><br>
+        Attn: Tom Mueller<br>
+        4218 County Road 318<br>
+        Benton, MO 63736<br>
+        <span style="color:#555">Account #</span> <strong>SK-04421</strong>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-header">Quote Details</div>
+      <div class="info-card-body" style="padding:6px 8px;">
+        <div class="info-row"><span>Quote No.</span><span>Q26-03-1418</span></div>
+        <div class="info-row"><span>Quote Date</span><span>March 12, 2026</span></div>
+        <div class="info-row"><span>Valid Through</span><span>April 11, 2026</span></div>
+        <div class="info-row"><span>Salesperson</span><span>Dale Reinhart</span></div>
+        <div class="info-row"><span>Crop Year</span><span>2026</span></div>
+        <div class="info-row"><span>Program</span><span>Furrow-Irrigated Corn</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== PROGRAM BANNER ============== -->
+  <div class="program-banner">
+    <div>2026 CORN PROGRAM &middot; FURROW-IRRIGATED &middot; 600.00 ACRES</div>
+    <div class="right">Field Group: Home Place + East 80 + River Bottom</div>
+  </div>
+
+  <!-- ============== SEED ============== -->
+  <div class="category">
+    <div class="category-title">Seed</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">SD-DKB-6869</td>
+          <td class="desc"><strong>DeKalb DKC68-69 RIB Complete</strong><small>Corn hybrid &middot; 116-day RM &middot; SmartStax PRO &middot; 80,000 kernel bag</small></td>
+          <td class="num">32,000 sds</td>
+          <td class="num">$312.50 / bag</td>
+          <td class="num">$125.00</td>
+          <td class="num">600</td>
+          <td class="num">$75,000.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Seed subtotal</td>
+          <td class="num">$125.00</td>
+          <td class="num">600</td>
+          <td class="num">$75,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== FERTILIZER ============== -->
+  <div class="category">
+    <div class="category-title">Fertilizer &amp; Soil Amendments</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">FT-UREA46</td>
+          <td class="desc"><strong>Urea 46-0-0, granular</strong><small>Nitrogen base &middot; pre-plant broadcast &middot; 200 lb N / ac</small></td>
+          <td class="num">435 lb</td>
+          <td class="num">$620.00 / ton</td>
+          <td class="num">$135.00</td>
+          <td class="num">600</td>
+          <td class="num">$81,000.00</td>
+        </tr>
+        <tr>
+          <td class="code">FT-UAN32</td>
+          <td class="desc"><strong>UAN-32 solution</strong><small>Side-dress nitrogen &middot; 40 lb N / ac &middot; includes application</small></td>
+          <td class="num">11.3 gal</td>
+          <td class="num">$3.05 / gal</td>
+          <td class="num">$85.00</td>
+          <td class="num">600</td>
+          <td class="num">$51,000.00</td>
+        </tr>
+        <tr>
+          <td class="code">FT-DAP1846</td>
+          <td class="desc"><strong>DAP 18-46-0</strong><small>Phosphorus &middot; 80 lb P&#8322;O&#8325; / ac &middot; pre-plant broadcast</small></td>
+          <td class="num">174 lb</td>
+          <td class="num">$920.00 / ton</td>
+          <td class="num">$80.00</td>
+          <td class="num">600</td>
+          <td class="num">$48,000.00</td>
+        </tr>
+        <tr>
+          <td class="code">FT-POT060</td>
+          <td class="desc"><strong>Potash 0-0-60 (MOP)</strong><small>Potassium &middot; 60 lb K&#8322;O / ac &middot; pre-plant broadcast</small></td>
+          <td class="num">100 lb</td>
+          <td class="num">$1,200.00 / ton</td>
+          <td class="num">$60.00</td>
+          <td class="num">600</td>
+          <td class="num">$36,000.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Fertilizer subtotal &middot; 240 lb N + 80 lb P&#8322;O&#8325; + 60 lb K&#8322;O per acre</td>
+          <td class="num">$360.00</td>
+          <td class="num">600</td>
+          <td class="num">$216,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== CROP PROTECTION ============== -->
+  <div class="category">
+    <div class="category-title">Crop Protection Chemicals</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">CP-ACURON</td>
+          <td class="desc"><strong>Acuron 4SC herbicide</strong><small>Pre-emergence &middot; Syngenta &middot; broad spectrum residual</small></td>
+          <td class="num">3.0 qt</td>
+          <td class="num">$56.00 / gal</td>
+          <td class="num">$42.00</td>
+          <td class="num">600</td>
+          <td class="num">$25,200.00</td>
+        </tr>
+        <tr>
+          <td class="code">CP-RUPMAX</td>
+          <td class="desc"><strong>Roundup PowerMAX 3 + Status</strong><small>Post-emergence tank mix &middot; 32 oz + 5 oz / ac</small></td>
+          <td class="num">37 oz</td>
+          <td class="num">— mix —</td>
+          <td class="num">$28.00</td>
+          <td class="num">600</td>
+          <td class="num">$16,800.00</td>
+        </tr>
+        <tr>
+          <td class="code">CP-HEADAMP</td>
+          <td class="desc"><strong>Headline AMP fungicide</strong><small>VT/R1 application &middot; BASF &middot; 10 oz / ac</small></td>
+          <td class="num">10 oz</td>
+          <td class="num">$35.84 / oz mix</td>
+          <td class="num">$28.00</td>
+          <td class="num">600</td>
+          <td class="num">$16,800.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Crop protection subtotal &middot; pre + post + fungicide</td>
+          <td class="num">$98.00</td>
+          <td class="num">600</td>
+          <td class="num">$58,800.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== IRRIGATION ============== -->
+  <div class="category">
+    <div class="category-title">Irrigation Supplies &amp; Power</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">IR-POLYP</td>
+          <td class="desc"><strong>Lay-flat poly pipe, 18&Prime; (10 mil)</strong><small>Replacement footage &middot; furrow irrigation</small></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">$12.50</td>
+          <td class="num">600</td>
+          <td class="num">$7,500.00</td>
+        </tr>
+        <tr>
+          <td class="code">IR-DIESEL</td>
+          <td class="desc"><strong>Diesel pumping fuel allowance</strong><small>18 ac-in pumped &middot; based on field-side tank quote</small></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">$28.50</td>
+          <td class="num">600</td>
+          <td class="num">$17,100.00</td>
+        </tr>
+        <tr>
+          <td class="code">IR-LABOR</td>
+          <td class="desc"><strong>Punch &amp; set service</strong><small>MFA crew &middot; per-acre rate &middot; subject to scheduling</small></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">$4.00</td>
+          <td class="num">600</td>
+          <td class="num">$2,400.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Irrigation subtotal</td>
+          <td class="num">$45.00</td>
+          <td class="num">600</td>
+          <td class="num">$27,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== INSURANCE ============== -->
+  <div class="category">
+    <div class="category-title">Crop Insurance (MFA Risk Management)</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">IN-RP75</td>
+          <td class="desc"><strong>Revenue Protection — 75% coverage</strong><small>RMA approved policy &middot; producer-paid premium net of subsidy</small></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">$30.00</td>
+          <td class="num">600</td>
+          <td class="num">$18,000.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Crop insurance subtotal</td>
+          <td class="num">$30.00</td>
+          <td class="num">600</td>
+          <td class="num">$18,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== SUMMARY ============== -->
+  <div class="summary-wrap">
+    <div class="summary-notes">
+      <h4>Terms &amp; Notes</h4>
+      <strong>Payment terms:</strong> Cash with order on seed at delivery. Fertilizer and chemical: net 30 days from delivery. <strong>2% prepay discount</strong> if invoiced fertilizer balance is paid by April 25, 2026.<br>
+      <strong>Pricing:</strong> Fertilizer and chemical prices reflect current published replacement cost as of the quote date and are subject to market change until prepay is received. Seed price locked through May 1, 2026.<br>
+      <strong>Application:</strong> Custom application charges of $7.85/ac (dry) and $9.20/ac (liquid) are billed separately on the application ticket.<br>
+      <strong>Returns:</strong> Unopened seed returnable until April 30, 2026, less 10% restocking. Chemicals non-returnable once delivered to farm.<br>
+      <strong>Account:</strong> Statement balance from 2025 season ($0.00) is current. Operating line interest, if extended, is 7.25% APR.
+    </div>
+    <div class="summary-totals">
+      <div class="row subtle"><span>5 categories &middot; 600 acres</span><span></span></div>
+      <div class="row"><span>Seed</span><span>$&nbsp;75,000.00</span></div>
+      <div class="row"><span>Fertilizer</span><span>$216,000.00</span></div>
+      <div class="row"><span>Crop protection</span><span>$&nbsp;58,800.00</span></div>
+      <div class="row"><span>Irrigation</span><span>$&nbsp;27,000.00</span></div>
+      <div class="row"><span>Crop insurance</span><span>$&nbsp;18,000.00</span></div>
+      <div class="row subtle"><span>Per-acre subtotal</span><span>$658.00 / ac</span></div>
+      <div class="row total"><span>QUOTED TOTAL</span><span>$394,800.00</span></div>
+      <div class="row subtle"><span>Less 2% prepay discount (fert.)</span><span>−$&nbsp;4,320.00</span></div>
+      <div class="row subtle"><span>Net if prepaid by 04/25/26</span><span>$390,480.00</span></div>
+    </div>
+  </div>
+
+  <!-- ============== SIGNATURE ============== -->
+  <div class="signature">
+    <div>
+      <div class="sigline"></div>
+      <div class="sig-label">Customer acceptance &middot; Tom Mueller, Mueller Family Farms</div>
+      <div style="margin-top:14px;">Date: ______________________</div>
+    </div>
+    <div>
+      <div class="sigline" style="position:relative;">
+        <span style="font-family: 'Brush Script MT', cursive; font-size: 14pt; color:#1a3357; position:absolute; bottom:0; left:4px;">Dale Reinhart</span>
+      </div>
+      <div class="sig-label">Sales representative &middot; Dale Reinhart, MFA Agronomy</div>
+      <div style="margin-top:14px;">Direct: (573) 471-2547 &middot; dale.reinhart@mfa-inc.example</div>
+    </div>
+  </div>
+
+  <!-- ============== FOOTER ============== -->
+  <div class="footer">
+    MFA Incorporated is a farmer-owned agricultural cooperative serving Missouri and adjacent states since 1914. This document is a price quote, not an invoice, and does not constitute a contract until accepted in writing and a delivery ticket is issued. Volume and rebate programs are calculated at season close and applied to the patron's equity account. All sales subject to MFA's published Terms of Sale (mfa-inc.example/terms). For agronomic recommendations contact your local MFA agronomist. Equal opportunity provider and employer.
+    <div style="margin-top:3px;">Quote Q26-03-1418 &middot; SK-04421 &middot; printed 03/12/2026 &middot; expires 04/11/2026</div>
+  </div>
+
+</body>
+</html>

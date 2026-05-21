@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bootheel Agronomy — Input Program Quote — Holcomb River Farms — BA-26-0309</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 0.45in 0.5in 0.5in 0.5in;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+    color: #1c1c1c;
+    font-size: 9.5pt;
+    line-height: 1.32;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .letterhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid #3b6e2e;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-mark {
+    width: 54px;
+    height: 54px;
+    background: #3b6e2e;
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 22pt;
+    letter-spacing: -1px;
+  }
+  .brand-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19pt;
+    font-weight: 700;
+    color: #3b6e2e;
+    letter-spacing: -0.3px;
+    line-height: 1;
+  }
+  .brand-tagline {
+    font-size: 8.5pt;
+    color: #555;
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  .branch-info {
+    text-align: right;
+    font-size: 8.5pt;
+    color: #333;
+    line-height: 1.35;
+  }
+  .branch-info strong {
+    color: #3b6e2e;
+    font-size: 9.5pt;
+  }
+
+  .doc-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 2px 0 12px 0;
+  }
+  .doc-title {
+    font-size: 14.5pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #3b6e2e;
+    text-transform: uppercase;
+  }
+  .doc-meta {
+    font-size: 8.5pt;
+    color: #666;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .info-card {
+    border: 1px solid #d0d4da;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .info-card-header {
+    background: #eef3ea;
+    color: #3b6e2e;
+    font-weight: 700;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    border-bottom: 1px solid #d0d4da;
+  }
+  .info-card-body {
+    padding: 6px 8px;
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 0;
+  }
+  .info-row span:first-child { color: #555; }
+  .info-row span:last-child  { font-weight: 600; }
+
+  .program-banner {
+    background: #3b6e2e;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 10pt;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .program-banner .right { font-weight: 400; opacity: 0.92; }
+
+  .category {
+    margin-bottom: 9px;
+    page-break-inside: avoid;
+  }
+  .category-title {
+    background: #e3ecdc;
+    padding: 3px 8px;
+    font-size: 9pt;
+    font-weight: 700;
+    color: #3b6e2e;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-left: 3px solid #3b6e2e;
+  }
+  table.items {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2px;
+  }
+  table.items th {
+    text-align: left;
+    font-size: 7.8pt;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 1px solid #c8cdd4;
+    padding: 3px 6px;
+    font-weight: 600;
+  }
+  table.items td {
+    padding: 3px 6px;
+    border-bottom: 1px solid #ececec;
+    vertical-align: top;
+    font-size: 9pt;
+  }
+  table.items td.num,
+  table.items th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  table.items td.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 8.4pt; color: #444; }
+  table.items td.desc strong { color: #1c1c1c; }
+  table.items td.desc small { color: #666; font-size: 8.2pt; display: block; margin-top: 1px; }
+  table.items tr.subtotal td {
+    border-top: 1px solid #3b6e2e;
+    border-bottom: none;
+    background: #f6f8f3;
+    font-weight: 700;
+    font-size: 9.2pt;
+    padding-top: 4px;
+  }
+
+  .summary-wrap {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .summary-notes {
+    flex: 1.4;
+    border: 1px solid #d0d4da;
+    border-radius: 3px;
+    padding: 7px 10px;
+    font-size: 8.5pt;
+    line-height: 1.45;
+    color: #333;
+  }
+  .summary-notes h4 {
+    margin: 0 0 4px 0;
+    color: #3b6e2e;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .summary-totals {
+    flex: 1;
+    border: 1.5px solid #3b6e2e;
+    border-radius: 3px;
+    padding: 7px 10px;
+    background: #fafbfd;
+  }
+  .summary-totals .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    font-size: 9pt;
+  }
+  .summary-totals .row.total {
+    border-top: 2px solid #3b6e2e;
+    margin-top: 5px;
+    padding-top: 6px;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #3b6e2e;
+  }
+  .summary-totals .row.subtle { color: #555; font-size: 8.5pt; }
+
+  .signature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+    font-size: 8.5pt;
+  }
+  .sigline {
+    border-bottom: 1px solid #555;
+    height: 28px;
+    margin-bottom: 3px;
+  }
+  .sig-label { color: #555; }
+
+  .footer {
+    margin-top: 14px;
+    padding-top: 6px;
+    border-top: 1px solid #c8cdd4;
+    font-size: 7.5pt;
+    color: #777;
+    line-height: 1.4;
+  }
+  .stamp {
+    position: absolute;
+    top: 165px;
+    right: 38px;
+    transform: rotate(-7deg);
+    border: 2px solid #9c2424;
+    color: #9c2424;
+    padding: 4px 12px;
+    font-weight: 700;
+    font-size: 11pt;
+    letter-spacing: 1.5px;
+    opacity: 0.78;
+    border-radius: 2px;
+    font-family: Georgia, serif;
+  }
+</style>
+</head>
+<body>
+
+  <div class="stamp">QUOTE — NOT AN INVOICE</div>
+
+  <div class="letterhead">
+    <div class="brand">
+      <div class="brand-mark">BA</div>
+      <div>
+        <div class="brand-name">Bootheel Agronomy LLC</div>
+        <div class="brand-tagline">Charleston Supply &middot; Mississippi County</div>
+      </div>
+    </div>
+    <div class="branch-info">
+      <strong>Bootheel Agronomy — Charleston</strong><br>
+      812 E. Marshall Street<br>
+      Charleston, MO 63834<br>
+      Office (573) 683-4127 &middot; Fax (573) 683-4129<br>
+      orders@bootheelagronomy.example
+    </div>
+  </div>
+
+  <div class="doc-title-row">
+    <div class="doc-title">2026 Input Program Quote</div>
+    <div class="doc-meta">Page 1 of 1 &middot; Generated 03/08/2026 16:42 CST</div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-card-header">Quoted To</div>
+      <div class="info-card-body">
+        <strong>Holcomb River Farms</strong><br>
+        Attn: Vance Holcomb<br>
+        1827 Highway WW<br>
+        East Prairie, MO 63845<br>
+        <span style="color:#555">Account #</span> <strong>CH-02174</strong>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-header">Quote Details</div>
+      <div class="info-card-body" style="padding:6px 8px;">
+        <div class="info-row"><span>Quote No.</span><span>BA-26-0309</span></div>
+        <div class="info-row"><span>Quote Date</span><span>March 9, 2026</span></div>
+        <div class="info-row"><span>Valid Through</span><span>April 8, 2026</span></div>
+        <div class="info-row"><span>Salesperson</span><span>Joel Ritter</span></div>
+        <div class="info-row"><span>Crop Year</span><span>2026</span></div>
+        <div class="info-row"><span>Program</span><span>Furrow-Irrigated Corn</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="program-banner">
+    <div>2026 CORN PROGRAM &middot; FURROW-IRRIGATED &middot; 850.00 ACRES</div>
+    <div class="right">Field Group: Bayou + South 160 + Levee 40</div>
+  </div>
+
+  <!-- ============== SEED ============== -->
+  <div class="category">
+    <div class="category-title">Seed</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">SD-PIO-1847</td>
+          <td class="desc"><strong>Pioneer P1847AM</strong><small>Corn hybrid &middot; 113-day RM &middot; Optimum AcreMax &middot; 80,000 kernel bag</small></td>
+          <td class="num">32,000 sds</td>
+          <td class="num">$320.00 / bag</td>
+          <td class="num">$128.00</td>
+          <td class="num">850</td>
+          <td class="num">$108,800.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Seed subtotal</td>
+          <td class="num">$128.00</td>
+          <td class="num">850</td>
+          <td class="num">$108,800.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== FERTILIZER ============== -->
+  <div class="category">
+    <div class="category-title">Fertilizer &amp; Soil Amendments</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">FT-UREA46</td>
+          <td class="desc"><strong>Urea 46-0-0, granular</strong><small>Nitrogen base &middot; pre-plant broadcast &middot; 200 lb N / ac</small></td>
+          <td class="num">435 lb</td>
+          <td class="num">$560.00 / ton</td>
+          <td class="num">$122.00</td>
+          <td class="num">850</td>
+          <td class="num">$103,700.00</td>
+        </tr>
+        <tr>
+          <td class="code">FT-UAN32</td>
+          <td class="desc"><strong>UAN-32 solution</strong><small>Side-dress nitrogen &middot; 40 lb N / ac &middot; includes application</small></td>
+          <td class="num">11.3 gal</td>
+          <td class="num">$2.78 / gal</td>
+          <td class="num">$78.00</td>
+          <td class="num">850</td>
+          <td class="num">$66,300.00</td>
+        </tr>
+        <tr>
+          <td class="code">FT-DAP1846</td>
+          <td class="desc"><strong>DAP 18-46-0</strong><small>Phosphorus &middot; 80 lb P&#8322;O&#8325; / ac &middot; pre-plant broadcast</small></td>
+          <td class="num">174 lb</td>
+          <td class="num">$840.00 / ton</td>
+          <td class="num">$73.00</td>
+          <td class="num">850</td>
+          <td class="num">$62,050.00</td>
+        </tr>
+        <tr>
+          <td class="code">FT-POT060</td>
+          <td class="desc"><strong>Potash 0-0-60 (MOP)</strong><small>Potassium &middot; 60 lb K&#8322;O / ac &middot; pre-plant broadcast</small></td>
+          <td class="num">100 lb</td>
+          <td class="num">$1,100.00 / ton</td>
+          <td class="num">$55.00</td>
+          <td class="num">850</td>
+          <td class="num">$46,750.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Fertilizer subtotal &middot; 240 lb N + 80 lb P&#8322;O&#8325; + 60 lb K&#8322;O per acre</td>
+          <td class="num">$328.00</td>
+          <td class="num">850</td>
+          <td class="num">$278,800.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== CROP PROTECTION ============== -->
+  <div class="category">
+    <div class="category-title">Crop Protection Chemicals</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">CP-RESI4</td>
+          <td class="desc"><strong>Resicore XL herbicide</strong><small>Pre-emergence &middot; Corteva &middot; broad spectrum residual</small></td>
+          <td class="num">2.75 qt</td>
+          <td class="num">$54.00 / gal</td>
+          <td class="num">$38.00</td>
+          <td class="num">850</td>
+          <td class="num">$32,300.00</td>
+        </tr>
+        <tr>
+          <td class="code">CP-RUPMAX</td>
+          <td class="desc"><strong>Roundup PowerMAX 3 + Status</strong><small>Post-emergence tank mix &middot; 32 oz + 5 oz / ac</small></td>
+          <td class="num">37 oz</td>
+          <td class="num">— mix —</td>
+          <td class="num">$26.00</td>
+          <td class="num">850</td>
+          <td class="num">$22,100.00</td>
+        </tr>
+        <tr>
+          <td class="code">CP-VELTYMA</td>
+          <td class="desc"><strong>Veltyma fungicide</strong><small>VT/R1 application &middot; BASF &middot; 7 oz / ac</small></td>
+          <td class="num">7 oz</td>
+          <td class="num">$42.85 / oz mix</td>
+          <td class="num">$30.00</td>
+          <td class="num">850</td>
+          <td class="num">$25,500.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Crop protection subtotal &middot; pre + post + fungicide</td>
+          <td class="num">$94.00</td>
+          <td class="num">850</td>
+          <td class="num">$79,900.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== IRRIGATION ============== -->
+  <div class="category">
+    <div class="category-title">Irrigation Supplies &amp; Power</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">IR-POLYP</td>
+          <td class="desc"><strong>Lay-flat poly pipe, 18&Prime; (10 mil)</strong><small>Replacement footage &middot; furrow irrigation</small></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">$14.00</td>
+          <td class="num">850</td>
+          <td class="num">$11,900.00</td>
+        </tr>
+        <tr>
+          <td class="code">IR-DIESEL</td>
+          <td class="desc"><strong>Diesel pumping fuel allowance</strong><small>20 ac-in pumped &middot; field-side tank quote</small></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">$30.00</td>
+          <td class="num">850</td>
+          <td class="num">$25,500.00</td>
+        </tr>
+        <tr>
+          <td class="code">IR-LABOR</td>
+          <td class="desc"><strong>Punch &amp; set service</strong><small>Bootheel crew &middot; per-acre rate &middot; subject to scheduling</small></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">$4.00</td>
+          <td class="num">850</td>
+          <td class="num">$3,400.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Irrigation subtotal</td>
+          <td class="num">$48.00</td>
+          <td class="num">850</td>
+          <td class="num">$40,800.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== INSURANCE ============== -->
+  <div class="category">
+    <div class="category-title">Crop Insurance (Bootheel Risk Group)</div>
+    <table class="items">
+      <thead>
+        <tr>
+          <th style="width:80px;">Item #</th>
+          <th>Description</th>
+          <th class="num" style="width:62px;">Rate / Ac</th>
+          <th class="num" style="width:78px;">Unit Price</th>
+          <th class="num" style="width:64px;">$ / Acre</th>
+          <th class="num" style="width:50px;">Acres</th>
+          <th class="num" style="width:78px;">Extended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="code">IN-RP80</td>
+          <td class="desc"><strong>Revenue Protection — 80% coverage</strong><small>RMA approved policy &middot; producer-paid premium net of subsidy</small></td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">$32.00</td>
+          <td class="num">850</td>
+          <td class="num">$27,200.00</td>
+        </tr>
+        <tr class="subtotal">
+          <td colspan="4">Crop insurance subtotal</td>
+          <td class="num">$32.00</td>
+          <td class="num">850</td>
+          <td class="num">$27,200.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============== SUMMARY ============== -->
+  <div class="summary-wrap">
+    <div class="summary-notes">
+      <h4>Terms &amp; Notes</h4>
+      <strong>Payment terms:</strong> Cash with order on seed at delivery. Fertilizer and chemical: net 30 days from delivery. <strong>3% prepay discount</strong> if invoiced fertilizer balance is paid by April 20, 2026.<br>
+      <strong>Pricing:</strong> Fertilizer and chemical prices reflect current replacement cost as of the quote date and may adjust until prepay is received. Seed price locked through May 1, 2026.<br>
+      <strong>Application:</strong> Custom application charges of $7.50/ac (dry) and $8.95/ac (liquid) are billed separately on the application ticket.<br>
+      <strong>Returns:</strong> Unopened seed returnable until April 30, 2026, less 10% restocking. Chemicals non-returnable once delivered to farm.<br>
+      <strong>Account:</strong> Statement balance from 2025 season ($0.00) is current. Operating line interest, if extended, is 7.10% APR.
+    </div>
+    <div class="summary-totals">
+      <div class="row subtle"><span>5 categories &middot; 850 acres</span><span></span></div>
+      <div class="row"><span>Seed</span><span>$108,800.00</span></div>
+      <div class="row"><span>Fertilizer</span><span>$278,800.00</span></div>
+      <div class="row"><span>Crop protection</span><span>$&nbsp;79,900.00</span></div>
+      <div class="row"><span>Irrigation</span><span>$&nbsp;40,800.00</span></div>
+      <div class="row"><span>Crop insurance</span><span>$&nbsp;27,200.00</span></div>
+      <div class="row subtle"><span>Per-acre subtotal</span><span>$630.00 / ac</span></div>
+      <div class="row total"><span>QUOTED TOTAL</span><span>$535,500.00</span></div>
+      <div class="row subtle"><span>Less 3% prepay discount (fert.)</span><span>−$&nbsp;8,364.00</span></div>
+      <div class="row subtle"><span>Net if prepaid by 04/20/26</span><span>$527,136.00</span></div>
+    </div>
+  </div>
+
+  <div class="signature">
+    <div>
+      <div class="sigline"></div>
+      <div class="sig-label">Customer acceptance &middot; Vance Holcomb, Holcomb River Farms</div>
+      <div style="margin-top:14px;">Date: ______________________</div>
+    </div>
+    <div>
+      <div class="sigline" style="position:relative;">
+        <span style="font-family: 'Brush Script MT', cursive; font-size: 14pt; color:#2a4f20; position:absolute; bottom:0; left:4px;">Joel Ritter</span>
+      </div>
+      <div class="sig-label">Sales representative &middot; Joel Ritter, Bootheel Agronomy</div>
+      <div style="margin-top:14px;">Direct: (573) 683-4133 &middot; joel.ritter@bootheelagronomy.example</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Bootheel Agronomy LLC is an independent input retailer serving Mississippi, New Madrid, and Scott Counties in southeast Missouri. This document is a price quote, not an invoice, and does not constitute a contract until accepted in writing and a delivery ticket is issued. Prepay programs, rebates, and volume tiers are calculated at season close and applied to the patron's account. All sales subject to Bootheel's published Terms of Sale (bootheelagronomy.example/terms). For agronomic recommendations contact your Bootheel agronomist. Equal opportunity provider and employer.
+    <div style="margin-top:3px;">Quote BA-26-0309 &middot; CH-02174 &middot; printed 03/09/2026 &middot; expires 04/08/2026</div>
+  </div>
+
+</body>
+</html>

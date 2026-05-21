@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "app_name": "Showline",
+    "tagline": "Independent cost benchmarks for Show-Me State farmers.",
+    "region": "Southeast Missouri",
+    "season_year": 2026,
+    "generated_at": "2026-03-15T08:00:00-05:00",
+    "data_notes": "Mock data for Vibeathon demo. Benchmarks are real (extracted from MU Extension g658, g659, g651). Peer farms, quotes, and paid prices are fabricated but plausible for SE Missouri. All peer GPS coordinates are jittered 1-2 miles per Showline privacy policy.",
+    "currency": "USD",
+    "units": {
+      "area": "acre",
+      "yield_corn": "bushel/acre",
+      "yield_soybean": "bushel/acre"
+    }
+  },
+
+  "benchmarks": {
+    "se_mo_corn_irrigated_2026": {
+      "id": "mu-g658-2026",
+      "publication_number": "g658",
+      "publisher": "University of Missouri Extension",
+      "title": "Southeast Missouri Corn Planning Budget",
+      "crop": "corn",
+      "production_system": "GMO furrow-irrigated",
+      "region": "Southeast Missouri",
+      "season_year": 2026,
+      "revision_date": "2025-12",
+      "source_url": "https://extension.missouri.edu/publications/g658",
+      "authors": [
+        "Ben Brown, Extension Specialist, Agricultural Business and Policy",
+        "Randal Stephens, Field Specialist in Agricultural Business",
+        "Drew Kientzy, Senior Research Analyst, Agricultural Business and Policy"
+      ],
+      "income_per_acre": {
+        "grain_sales": 1004.56,
+        "government_payments": 25.00,
+        "total_income": 1029.56
+      },
+      "operating_costs_per_acre": {
+        "seed": 119.25,
+        "fertilizer_and_soil_amendments": 303.15,
+        "crop_protection_chemicals": 101.00,
+        "irrigation": 43.02,
+        "grain_drying": 58.00,
+        "crop_supplies_storage_marketing": 8.50,
+        "crop_consulting_and_insurance": 28.00,
+        "custom_hire_and_rental": 27.34,
+        "operator_labor_and_management": 53.30,
+        "machinery_fuel": 27.14,
+        "machinery_repairs_and_maintenance": 47.71,
+        "operating_interest": 28.04,
+        "total_operating_costs": 844.45
+      },
+      "ownership_costs_per_acre": {
+        "farm_business_overhead": 20.59,
+        "machinery_ownership": 141.03,
+        "real_estate_charge": 225.00,
+        "total_ownership_costs": 386.62
+      },
+      "total_costs_per_acre": 1231.07,
+      "summary_per_acre": {
+        "income_over_operating_costs": 185.11,
+        "income_over_total_costs": -201.51,
+        "return_to_land_and_management": 54.37
+      },
+      "per_bushel": {
+        "operating_costs": 3.64,
+        "ownership_costs": 1.67,
+        "total_costs": 5.31
+      },
+      "input_assumptions": {
+        "yield_bu_per_acre": 232,
+        "seeding_rate_count": 36000,
+        "nitrogen_rate_urea_lbs": 250,
+        "phosphorus_rate_lbs_P2O5": 95,
+        "potassium_rate_lbs_K2O": 65,
+        "lime_rate_tons": 0.60,
+        "skilled_operator_labor_hours": 1.00,
+        "irrigation_water_acre_inches": 18.0,
+        "operating_interest_apr_pct": 7.25
+      },
+      "input_prices": {
+        "corn_market_price_per_bu": 4.33,
+        "seed_per_80k_bag": 265.00,
+        "nitrogen_urea_per_lb_N": 0.70,
+        "phosphorus_per_lb_P2O5": 0.73,
+        "potassium_per_lb_K2O": 0.42,
+        "lime_per_ton": 35.00,
+        "skilled_operator_labor_per_hour": 22.50,
+        "irrigation_water_per_acre_inch": 2.39,
+        "farm_diesel_per_gallon": 2.90
+      }
+    },
+
+    "se_mo_soybean_irrigated_2026": {
+      "id": "mu-g659-2026",
+      "publication_number": "g659",
+      "publisher": "University of Missouri Extension",
+      "title": "Southeast Missouri Soybean Planning Budget",
+      "crop": "soybean",
+      "production_system": "GMO furrow-irrigated",
+      "region": "Southeast Missouri",
+      "season_year": 2026,
+      "revision_date": "2025-12",
+      "source_url": "https://extension.missouri.edu/publications/g659",
+      "income_per_acre": {
+        "grain_sales": 663.40,
+        "government_payments": 25.00,
+        "total_income": 688.40
+      },
+      "operating_costs_per_acre": {
+        "seed": 69.64,
+        "fertilizer_and_soil_amendments": 100.50,
+        "crop_protection_chemicals": 109.00,
+        "irrigation": 43.02,
+        "crop_supplies_storage_marketing": 8.50,
+        "crop_consulting_and_insurance": 28.00,
+        "custom_hire_and_rental": 32.57,
+        "operator_labor_and_management": 35.08,
+        "machinery_fuel": 16.31,
+        "machinery_repairs_and_maintenance": 29.53,
+        "operating_interest": 15.56,
+        "total_operating_costs": 487.70
+      },
+      "ownership_costs_per_acre": {
+        "farm_business_overhead": 13.77,
+        "machinery_ownership": 99.41,
+        "real_estate_charge": 225.00,
+        "total_ownership_costs": 338.18
+      },
+      "total_costs_per_acre": 825.88,
+      "summary_per_acre": {
+        "income_over_operating_costs": 200.70,
+        "income_over_total_costs": -137.48,
+        "return_to_land_and_management": 108.17
+      },
+      "per_bushel": {
+        "operating_costs": 7.87,
+        "ownership_costs": 5.45,
+        "total_costs": 13.32
+      },
+      "input_assumptions": {
+        "yield_bu_per_acre": 62,
+        "seeding_rate_count": 130000,
+        "phosphorus_rate_lbs_P2O5": 50,
+        "potassium_rate_lbs_K2O": 95,
+        "lime_rate_tons": 0.50,
+        "skilled_operator_labor_hours": 0.64,
+        "irrigation_water_acre_inches": 18.0,
+        "operating_interest_apr_pct": 7.25
+      },
+      "input_prices": {
+        "soybean_market_price_per_bu": 10.70,
+        "seed_per_140k_bag": 75.00,
+        "phosphorus_per_lb_P2O5": 0.73,
+        "potassium_per_lb_K2O": 0.42,
+        "lime_per_ton": 35.00,
+        "skilled_operator_labor_per_hour": 22.50,
+        "irrigation_water_per_acre_inch": 2.39,
+        "farm_diesel_per_gallon": 2.90
+      }
+    },
+
+    "mo_corn_dryland_2026": {
+      "id": "mu-g651-2026",
+      "publication_number": "g651",
+      "publisher": "University of Missouri Extension",
+      "title": "Corn (Dryland) Planning Budget",
+      "crop": "corn",
+      "production_system": "dryland",
+      "region": "Northern/Central/Southwest Missouri",
+      "season_year": 2026,
+      "revision_date": "2025-10",
+      "source_url": "https://extension.missouri.edu/publications/g651",
+      "income_per_acre": {
+        "grain_sales": 762.08,
+        "government_payments": 25.00,
+        "total_income": 787.08
+      },
+      "operating_costs_per_acre": {
+        "seed": 99.38,
+        "fertilizer_and_soil_amendments": 187.01,
+        "crop_protection_chemicals": 104.00,
+        "grain_drying": 26.40,
+        "crop_supplies_storage_marketing": 8.50,
+        "crop_consulting_and_insurance": 18.00,
+        "custom_hire_and_rental": 19.97,
+        "operator_labor": 22.60,
+        "machinery_fuel": 21.76,
+        "machinery_repairs_and_maintenance": 32.11,
+        "management": 39.35,
+        "operating_interest": 20.99,
+        "total_operating_costs": 600.07
+      },
+      "ownership_costs_per_acre": {
+        "farm_business_overhead": 23.61,
+        "machinery_ownership": 93.78,
+        "real_estate_charge": 185.00,
+        "total_ownership_costs": 302.40
+      },
+      "total_costs_per_acre": 902.47,
+      "summary_per_acre": {
+        "income_over_operating_costs": 187.01,
+        "income_over_total_costs": -115.39,
+        "return_to_land_and_management": 108.97
+      },
+      "per_bushel": {
+        "operating_costs": 3.41,
+        "ownership_costs": 1.72,
+        "total_costs": 5.13
+      },
+      "input_assumptions": {
+        "yield_bu_per_acre": 176,
+        "seeding_rate_count": 30000,
+        "anhydrous_ammonia_rate_lbs_N": 120,
+        "side_dress_nitrogen_rate_lbs_N": 40,
+        "phosphorus_rate_lbs_P2O5": 65,
+        "potassium_rate_lbs_K2O": 48,
+        "other_nutrients_lbs": 13,
+        "lime_rate_tons": 0.60,
+        "skilled_operator_labor_hours": 0.82,
+        "operating_interest_apr_pct": 7.25
+      },
+      "input_prices": {
+        "corn_market_price_per_bu": 4.33,
+        "seed_per_80k_bag": 265.00,
+        "anhydrous_ammonia_per_lb_N": 0.52,
+        "side_dress_nitrogen_per_lb_N": 0.70,
+        "phosphorus_per_lb_P2O5": 0.73,
+        "potassium_per_lb_K2O": 0.42,
+        "other_nutrients_per_lb": 0.62,
+        "lime_per_ton": 35.00,
+        "skilled_operator_labor_per_hour": 27.50,
+        "farm_diesel_per_gallon": 2.90
+      }
+    }
+  },
+
+  "categories": [
+    { "id": "seed", "label": "Seed", "applies_to": ["corn", "soybean"] },
+    { "id": "fertilizer", "label": "Fertilizer and soil amendments", "applies_to": ["corn", "soybean"] },
+    { "id": "crop_protection", "label": "Crop protection chemicals", "applies_to": ["corn", "soybean"] },
+    { "id": "irrigation", "label": "Irrigation supplies and power", "applies_to": ["corn", "soybean"] },
+    { "id": "crop_insurance", "label": "Crop consulting and insurance", "applies_to": ["corn", "soybean"] },
+    { "id": "grain_drying", "label": "Grain drying", "applies_to": ["corn"] },
+    { "id": "custom_hire", "label": "Custom hire and rental", "applies_to": ["corn", "soybean"] }
+  ],
+
+  "suppliers": [
+    { "id": "sup_mfa_sikeston", "name": "MFA Incorporated", "branch": "Sikeston", "type": "co-op", "city": "Sikeston", "county": "Scott", "state": "MO", "lat": 36.8767, "lng": -89.5878 },
+    { "id": "sup_mfa_charleston", "name": "MFA Incorporated", "branch": "Charleston", "type": "co-op", "city": "Charleston", "county": "Mississippi", "state": "MO", "lat": 36.9217, "lng": -89.3506 },
+    { "id": "sup_mfa_dexter", "name": "MFA Incorporated", "branch": "Dexter", "type": "co-op", "city": "Dexter", "county": "Stoddard", "state": "MO", "lat": 36.7956, "lng": -89.9576 },
+    { "id": "sup_chs_sikeston", "name": "CHS Inc.", "branch": "Sikeston", "type": "co-op", "city": "Sikeston", "county": "Scott", "state": "MO", "lat": 36.8801, "lng": -89.5821 },
+    { "id": "sup_helena_kennett", "name": "Helena Agri-Enterprises", "branch": "Kennett", "type": "retail", "city": "Kennett", "county": "Dunklin", "state": "MO", "lat": 36.2362, "lng": -90.0556 },
+    { "id": "sup_nutrien_caruthersville", "name": "Nutrien Ag Solutions", "branch": "Caruthersville", "type": "retail", "city": "Caruthersville", "county": "Pemiscot", "state": "MO", "lat": 36.1925, "lng": -89.6553 },
+    { "id": "sup_sikeston_grain", "name": "Sikeston Grain & Supply", "branch": "Sikeston", "type": "independent", "city": "Sikeston", "county": "Scott", "state": "MO", "lat": 36.8703, "lng": -89.5933 }
+  ],
+
+  "users": [
+    {
+      "id": "usr_tom_mueller",
+      "display_name": "Tom",
+      "full_name_internal": "Tom Mueller",
+      "phone_last4": "4421",
+      "age": 47,
+      "primary_farm_id": "farm_mueller",
+      "created_at": "2025-11-04T19:22:00-06:00",
+      "device": {
+        "os": "Android 11",
+        "model": "Samsung Galaxy A12",
+        "screen_size_in": 6.5,
+        "connection": "rural LTE (intermittent)"
+      },
+      "privacy_settings": {
+        "contribute_to_peer_dataset": true,
+        "notify_post_contract_followup": true,
+        "share_with_lender_enabled": true
+      },
+      "lender": {
+        "name": "Heartland Farm Credit",
+        "loan_officer": "Karen Whitfield",
+        "email": "kwhitfield@heartlandfc.example"
+      }
+    }
+  ],
+
+  "farms": [
+    {
+      "id": "farm_mueller",
+      "is_demo_user_farm": true,
+      "internal_name": "Mueller Family Farms",
+      "owner_user_id": "usr_tom_mueller",
+      "county": "Scott",
+      "state": "MO",
+      "nearest_town": "Benton",
+      "lat_exact": 37.0908,
+      "lng_exact": -89.5634,
+      "lat_jittered": 37.0908,
+      "lng_jittered": -89.5634,
+      "total_acres": 1200,
+      "crop_mix": [
+        { "crop": "corn", "acres": 600, "production_system": "furrow-irrigated" },
+        { "crop": "soybean", "acres": 600, "production_system": "furrow-irrigated" }
+      ],
+      "primary_soil_type": "Sharkey clay",
+      "secondary_soil_type": "Tiptonville silt loam",
+      "irrigation": "furrow",
+      "established_year": 1978
+    },
+
+    { "id": "farm_p01", "internal_name": "Anonymized Farm 01", "county": "Scott",         "state": "MO", "nearest_town": "Sikeston",      "lat_jittered": 37.022,  "lng_jittered": -89.601, "total_acres": 950,  "crop_mix": [{"crop":"corn","acres":480,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":470,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p02", "internal_name": "Anonymized Farm 02", "county": "Scott",         "state": "MO", "nearest_town": "Benton",        "lat_jittered": 37.105,  "lng_jittered": -89.589, "total_acres": 1450, "crop_mix": [{"crop":"corn","acres":700,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":750,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p03", "internal_name": "Anonymized Farm 03", "county": "Scott",         "state": "MO", "nearest_town": "Chaffee",       "lat_jittered": 37.181,  "lng_jittered": -89.659, "total_acres": 780,  "crop_mix": [{"crop":"corn","acres":380,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":400,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sikeston silt loam" },
+    { "id": "farm_p04", "internal_name": "Anonymized Farm 04", "county": "Scott",         "state": "MO", "nearest_town": "Oran",          "lat_jittered": 37.083,  "lng_jittered": -89.658, "total_acres": 1100, "crop_mix": [{"crop":"corn","acres":600,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":500,"production_system":"furrow-irrigated"}], "primary_soil_type": "Tiptonville silt loam" },
+    { "id": "farm_p05", "internal_name": "Anonymized Farm 05", "county": "Scott",         "state": "MO", "nearest_town": "Morley",        "lat_jittered": 37.029,  "lng_jittered": -89.642, "total_acres": 1320, "crop_mix": [{"crop":"corn","acres":650,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":670,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p06", "internal_name": "Anonymized Farm 06", "county": "New Madrid",    "state": "MO", "nearest_town": "New Madrid",    "lat_jittered": 36.598,  "lng_jittered": -89.529, "total_acres": 2100, "crop_mix": [{"crop":"corn","acres":1050,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":1050,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p07", "internal_name": "Anonymized Farm 07", "county": "New Madrid",    "state": "MO", "nearest_town": "Portageville",  "lat_jittered": 36.435,  "lng_jittered": -89.701, "total_acres": 1650, "crop_mix": [{"crop":"corn","acres":800,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":850,"production_system":"furrow-irrigated"}], "primary_soil_type": "Dubbs silt loam" },
+    { "id": "farm_p08", "internal_name": "Anonymized Farm 08", "county": "New Madrid",    "state": "MO", "nearest_town": "Lilbourn",      "lat_jittered": 36.589,  "lng_jittered": -89.617, "total_acres": 820,  "crop_mix": [{"crop":"corn","acres":420,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":400,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p09", "internal_name": "Anonymized Farm 09", "county": "Mississippi",   "state": "MO", "nearest_town": "Charleston",    "lat_jittered": 36.918,  "lng_jittered": -89.348, "total_acres": 1280, "crop_mix": [{"crop":"corn","acres":640,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":640,"production_system":"furrow-irrigated"}], "primary_soil_type": "Crowley silt loam" },
+    { "id": "farm_p10", "internal_name": "Anonymized Farm 10", "county": "Mississippi",   "state": "MO", "nearest_town": "East Prairie",  "lat_jittered": 36.781,  "lng_jittered": -89.385, "total_acres": 1750, "crop_mix": [{"crop":"corn","acres":900,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":850,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p11", "internal_name": "Anonymized Farm 11", "county": "Mississippi",   "state": "MO", "nearest_town": "Bertrand",      "lat_jittered": 36.913,  "lng_jittered": -89.435, "total_acres": 690,  "crop_mix": [{"crop":"corn","acres":350,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":340,"production_system":"furrow-irrigated"}], "primary_soil_type": "Dubbs silt loam" },
+    { "id": "farm_p12", "internal_name": "Anonymized Farm 12", "county": "Stoddard",      "state": "MO", "nearest_town": "Dexter",        "lat_jittered": 36.791,  "lng_jittered": -89.955, "total_acres": 980,  "crop_mix": [{"crop":"corn","acres":500,"production_system":"dryland"},{"crop":"soybean","acres":480,"production_system":"furrow-irrigated"}], "primary_soil_type": "Calloway silt loam" },
+    { "id": "farm_p13", "internal_name": "Anonymized Farm 13", "county": "Stoddard",      "state": "MO", "nearest_town": "Bloomfield",    "lat_jittered": 36.882,  "lng_jittered": -89.928, "total_acres": 1380, "crop_mix": [{"crop":"corn","acres":700,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":680,"production_system":"furrow-irrigated"}], "primary_soil_type": "Falaya silt loam" },
+    { "id": "farm_p14", "internal_name": "Anonymized Farm 14", "county": "Stoddard",      "state": "MO", "nearest_town": "Advance",       "lat_jittered": 37.094,  "lng_jittered": -89.911, "total_acres": 560,  "crop_mix": [{"crop":"corn","acres":280,"production_system":"dryland"},{"crop":"soybean","acres":280,"production_system":"dryland"}], "primary_soil_type": "Calloway silt loam" },
+    { "id": "farm_p15", "internal_name": "Anonymized Farm 15", "county": "Pemiscot",      "state": "MO", "nearest_town": "Caruthersville","lat_jittered": 36.189,  "lng_jittered": -89.659, "total_acres": 2350, "crop_mix": [{"crop":"corn","acres":1200,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":1150,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p16", "internal_name": "Anonymized Farm 16", "county": "Pemiscot",      "state": "MO", "nearest_town": "Hayti",         "lat_jittered": 36.235,  "lng_jittered": -89.751, "total_acres": 1410, "crop_mix": [{"crop":"corn","acres":700,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":710,"production_system":"furrow-irrigated"}], "primary_soil_type": "Dundee silt loam" },
+    { "id": "farm_p17", "internal_name": "Anonymized Farm 17", "county": "Dunklin",       "state": "MO", "nearest_town": "Kennett",       "lat_jittered": 36.241,  "lng_jittered": -90.052, "total_acres": 1620, "crop_mix": [{"crop":"corn","acres":820,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":800,"production_system":"furrow-irrigated"}], "primary_soil_type": "Dubbs silt loam" },
+    { "id": "farm_p18", "internal_name": "Anonymized Farm 18", "county": "Dunklin",       "state": "MO", "nearest_town": "Malden",        "lat_jittered": 36.561,  "lng_jittered": -89.972, "total_acres": 760,  "crop_mix": [{"crop":"corn","acres":380,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":380,"production_system":"furrow-irrigated"}], "primary_soil_type": "Crowley silt loam" },
+    { "id": "farm_p19", "internal_name": "Anonymized Farm 19", "county": "Dunklin",       "state": "MO", "nearest_town": "Senath",        "lat_jittered": 36.137,  "lng_jittered": -90.158, "total_acres": 1050, "crop_mix": [{"crop":"corn","acres":550,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":500,"production_system":"furrow-irrigated"}], "primary_soil_type": "Dundee silt loam" },
+    { "id": "farm_p20", "internal_name": "Anonymized Farm 20", "county": "Butler",        "state": "MO", "nearest_town": "Poplar Bluff",  "lat_jittered": 36.760,  "lng_jittered": -90.395, "total_acres": 670,  "crop_mix": [{"crop":"corn","acres":340,"production_system":"dryland"},{"crop":"soybean","acres":330,"production_system":"dryland"}], "primary_soil_type": "Falaya silt loam" },
+    { "id": "farm_p21", "internal_name": "Anonymized Farm 21", "county": "Scott",         "state": "MO", "nearest_town": "Scott City",    "lat_jittered": 37.218,  "lng_jittered": -89.520, "total_acres": 510,  "crop_mix": [{"crop":"corn","acres":260,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":250,"production_system":"furrow-irrigated"}], "primary_soil_type": "Tiptonville silt loam" },
+    { "id": "farm_p22", "internal_name": "Anonymized Farm 22", "county": "New Madrid",    "state": "MO", "nearest_town": "Marston",       "lat_jittered": 36.515,  "lng_jittered": -89.611, "total_acres": 1180, "crop_mix": [{"crop":"corn","acres":580,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":600,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p23", "internal_name": "Anonymized Farm 23", "county": "Mississippi",   "state": "MO", "nearest_town": "Wyatt",         "lat_jittered": 36.913,  "lng_jittered": -89.225, "total_acres": 920,  "crop_mix": [{"crop":"corn","acres":460,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":460,"production_system":"furrow-irrigated"}], "primary_soil_type": "Crowley silt loam" },
+    { "id": "farm_p24", "internal_name": "Anonymized Farm 24", "county": "Stoddard",      "state": "MO", "nearest_town": "Essex",         "lat_jittered": 36.808,  "lng_jittered": -89.860, "total_acres": 730,  "crop_mix": [{"crop":"corn","acres":370,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":360,"production_system":"furrow-irrigated"}], "primary_soil_type": "Falaya silt loam" },
+    { "id": "farm_p25", "internal_name": "Anonymized Farm 25", "county": "Pemiscot",      "state": "MO", "nearest_town": "Steele",        "lat_jittered": 36.084,  "lng_jittered": -89.831, "total_acres": 1820, "crop_mix": [{"crop":"corn","acres":910,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":910,"production_system":"furrow-irrigated"}], "primary_soil_type": "Dundee silt loam" },
+    { "id": "farm_p26", "internal_name": "Anonymized Farm 26", "county": "Scott",         "state": "MO", "nearest_town": "Kelso",         "lat_jittered": 37.198,  "lng_jittered": -89.560, "total_acres": 1010, "crop_mix": [{"crop":"corn","acres":510,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":500,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sikeston silt loam" },
+    { "id": "farm_p27", "internal_name": "Anonymized Farm 27", "county": "New Madrid",    "state": "MO", "nearest_town": "Gideon",        "lat_jittered": 36.451,  "lng_jittered": -89.918, "total_acres": 1530, "crop_mix": [{"crop":"corn","acres":780,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":750,"production_system":"furrow-irrigated"}], "primary_soil_type": "Dubbs silt loam" },
+    { "id": "farm_p28", "internal_name": "Anonymized Farm 28", "county": "Dunklin",       "state": "MO", "nearest_town": "Hornersville", "lat_jittered": 36.040,  "lng_jittered": -90.107, "total_acres": 880,  "crop_mix": [{"crop":"corn","acres":440,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":440,"production_system":"furrow-irrigated"}], "primary_soil_type": "Crowley silt loam" },
+    { "id": "farm_p29", "internal_name": "Anonymized Farm 29", "county": "Mississippi",   "state": "MO", "nearest_town": "Anniston",      "lat_jittered": 36.819,  "lng_jittered": -89.323, "total_acres": 1240, "crop_mix": [{"crop":"corn","acres":620,"production_system":"furrow-irrigated"},{"crop":"soybean","acres":620,"production_system":"furrow-irrigated"}], "primary_soil_type": "Sharkey clay" },
+    { "id": "farm_p30", "internal_name": "Anonymized Farm 30", "county": "Stoddard",      "state": "MO", "nearest_town": "Puxico",        "lat_jittered": 36.948,  "lng_jittered": -90.158, "total_acres": 590,  "crop_mix": [{"crop":"corn","acres":300,"production_system":"dryland"},{"crop":"soybean","acres":290,"production_system":"dryland"}], "primary_soil_type": "Falaya silt loam" }
+  ],
+
+  "quotes": [
+    {
+      "id": "quote_tom_mfa_2026_03",
+      "is_demo_quote": true,
+      "farm_id": "farm_mueller",
+      "user_id": "usr_tom_mueller",
+      "supplier_id": "sup_mfa_sikeston",
+      "supplier_display": "MFA Incorporated, Sikeston branch",
+      "crop": "corn",
+      "production_system": "furrow-irrigated",
+      "quote_date": "2026-03-12",
+      "uploaded_at": "2026-03-15T19:42:11-05:00",
+      "source": "photo",
+      "acres_covered": 600,
+      "ocr_confidence": 0.94,
+      "sarah_notes": "Detected supplier: MFA Incorporated, Sikeston branch. Quote date: March 12, 2026. Acres: 600 (corn program). All line items extracted with high confidence.",
+      "line_items": [
+        {
+          "category": "seed",
+          "description": "DeKalb DKC68-69, 32K population",
+          "price_per_acre": 125.00,
+          "extracted_confidence": 0.97
+        },
+        {
+          "category": "fertilizer",
+          "description": "Fertilizer total (N + P + K)",
+          "price_per_acre": 360.00,
+          "extracted_confidence": 0.96,
+          "components": [
+            { "label": "Nitrogen (urea + UAN, 240 units)", "price_per_acre": 220.00 },
+            { "label": "Phosphorus (DAP, 80 lb)", "price_per_acre": 80.00 },
+            { "label": "Potassium (potash, 60 lb)", "price_per_acre": 60.00 }
+          ]
+        },
+        {
+          "category": "crop_protection",
+          "description": "Pre-emerge + post-emerge + fungicide",
+          "price_per_acre": 98.00,
+          "extracted_confidence": 0.92
+        },
+        {
+          "category": "irrigation",
+          "description": "Irrigation supplies & power",
+          "price_per_acre": 45.00,
+          "extracted_confidence": 0.93
+        },
+        {
+          "category": "crop_insurance",
+          "description": "Crop insurance (75% RP)",
+          "price_per_acre": 30.00,
+          "extracted_confidence": 0.95
+        }
+      ],
+      "total_quoted_per_acre": 658.00,
+      "total_quoted_full_operation": 394800
+    },
+
+    { "id": "quote_p01", "farm_id": "farm_p01", "supplier_id": "sup_mfa_sikeston",      "crop": "corn", "quote_date": "2026-03-02", "acres_covered": 480,  "line_items_per_acre": { "seed": 121.00, "fertilizer": 308.00, "crop_protection": 96.00,  "irrigation": 43.50, "crop_insurance": 28.00 } },
+    { "id": "quote_p02", "farm_id": "farm_p02", "supplier_id": "sup_mfa_sikeston",      "crop": "corn", "quote_date": "2026-02-25", "acres_covered": 700,  "line_items_per_acre": { "seed": 119.50, "fertilizer": 298.00, "crop_protection": 99.50,  "irrigation": 44.00, "crop_insurance": 28.50 } },
+    { "id": "quote_p03", "farm_id": "farm_p03", "supplier_id": "sup_chs_sikeston",      "crop": "corn", "quote_date": "2026-03-05", "acres_covered": 380,  "line_items_per_acre": { "seed": 122.50, "fertilizer": 295.00, "crop_protection": 101.00, "irrigation": 42.50, "crop_insurance": 29.00 } },
+    { "id": "quote_p04", "farm_id": "farm_p04", "supplier_id": "sup_mfa_sikeston",      "crop": "corn", "quote_date": "2026-03-08", "acres_covered": 600,  "line_items_per_acre": { "seed": 123.00, "fertilizer": 312.00, "crop_protection": 102.00, "irrigation": 44.50, "crop_insurance": 30.00 } },
+    { "id": "quote_p05", "farm_id": "farm_p05", "supplier_id": "sup_chs_sikeston",      "crop": "corn", "quote_date": "2026-03-01", "acres_covered": 650,  "line_items_per_acre": { "seed": 118.00, "fertilizer": 302.00, "crop_protection": 100.00, "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "quote_p06", "farm_id": "farm_p06", "supplier_id": "sup_mfa_charleston",    "crop": "corn", "quote_date": "2026-02-22", "acres_covered": 1050, "line_items_per_acre": { "seed": 117.50, "fertilizer": 289.00, "crop_protection": 97.50,  "irrigation": 42.00, "crop_insurance": 27.50 } },
+    { "id": "quote_p07", "farm_id": "farm_p07", "supplier_id": "sup_nutrien_caruthersville", "crop": "corn", "quote_date": "2026-03-04", "acres_covered": 800,  "line_items_per_acre": { "seed": 120.00, "fertilizer": 294.00, "crop_protection": 98.00,  "irrigation": 43.50, "crop_insurance": 28.00 } },
+    { "id": "quote_p08", "farm_id": "farm_p08", "supplier_id": "sup_mfa_charleston",    "crop": "corn", "quote_date": "2026-03-06", "acres_covered": 420,  "line_items_per_acre": { "seed": 124.00, "fertilizer": 311.00, "crop_protection": 103.00, "irrigation": 45.00, "crop_insurance": 29.50 } },
+    { "id": "quote_p09", "farm_id": "farm_p09", "supplier_id": "sup_mfa_charleston",    "crop": "corn", "quote_date": "2026-03-09", "acres_covered": 640,  "line_items_per_acre": { "seed": 122.00, "fertilizer": 306.00, "crop_protection": 99.00,  "irrigation": 43.00, "crop_insurance": 28.50 } },
+    { "id": "quote_p10", "farm_id": "farm_p10", "supplier_id": "sup_mfa_charleston",    "crop": "corn", "quote_date": "2026-03-03", "acres_covered": 900,  "line_items_per_acre": { "seed": 118.50, "fertilizer": 287.00, "crop_protection": 96.00,  "irrigation": 42.50, "crop_insurance": 27.50 } },
+    { "id": "quote_p11", "farm_id": "farm_p11", "supplier_id": "sup_sikeston_grain",    "crop": "corn", "quote_date": "2026-03-07", "acres_covered": 350,  "line_items_per_acre": { "seed": 125.50, "fertilizer": 315.00, "crop_protection": 104.00, "irrigation": 45.50, "crop_insurance": 30.50 } },
+    { "id": "quote_p12", "farm_id": "farm_p12", "supplier_id": "sup_mfa_dexter",        "crop": "corn", "quote_date": "2026-02-28", "acres_covered": 500,  "line_items_per_acre": { "seed": 119.00, "fertilizer": 285.00, "crop_protection": 95.50,  "irrigation": 0.00,  "crop_insurance": 27.00 } },
+    { "id": "quote_p13", "farm_id": "farm_p13", "supplier_id": "sup_mfa_dexter",        "crop": "corn", "quote_date": "2026-03-10", "acres_covered": 700,  "line_items_per_acre": { "seed": 121.00, "fertilizer": 303.00, "crop_protection": 100.00, "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "quote_p14", "farm_id": "farm_p14", "supplier_id": "sup_mfa_dexter",        "crop": "corn", "quote_date": "2026-03-11", "acres_covered": 280,  "line_items_per_acre": { "seed": 122.50, "fertilizer": 292.00, "crop_protection": 99.00,  "irrigation": 0.00,  "crop_insurance": 28.50 } },
+    { "id": "quote_p15", "farm_id": "farm_p15", "supplier_id": "sup_nutrien_caruthersville", "crop": "corn", "quote_date": "2026-02-20", "acres_covered": 1200, "line_items_per_acre": { "seed": 116.50, "fertilizer": 281.00, "crop_protection": 94.50,  "irrigation": 41.50, "crop_insurance": 27.00 } },
+    { "id": "quote_p16", "farm_id": "farm_p16", "supplier_id": "sup_nutrien_caruthersville", "crop": "corn", "quote_date": "2026-03-01", "acres_covered": 700,  "line_items_per_acre": { "seed": 120.50, "fertilizer": 296.00, "crop_protection": 98.50,  "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "quote_p17", "farm_id": "farm_p17", "supplier_id": "sup_helena_kennett",    "crop": "corn", "quote_date": "2026-03-04", "acres_covered": 820,  "line_items_per_acre": { "seed": 119.00, "fertilizer": 291.00, "crop_protection": 97.00,  "irrigation": 42.50, "crop_insurance": 27.50 } },
+    { "id": "quote_p18", "farm_id": "farm_p18", "supplier_id": "sup_helena_kennett",    "crop": "corn", "quote_date": "2026-03-08", "acres_covered": 380,  "line_items_per_acre": { "seed": 122.00, "fertilizer": 304.00, "crop_protection": 101.00, "irrigation": 43.50, "crop_insurance": 28.50 } },
+    { "id": "quote_p19", "farm_id": "farm_p19", "supplier_id": "sup_helena_kennett",    "crop": "corn", "quote_date": "2026-03-12", "acres_covered": 550,  "line_items_per_acre": { "seed": 121.50, "fertilizer": 313.00, "crop_protection": 102.50, "irrigation": 44.00, "crop_insurance": 29.50 } },
+    { "id": "quote_p20", "farm_id": "farm_p20", "supplier_id": "sup_mfa_dexter",        "crop": "corn", "quote_date": "2026-03-06", "acres_covered": 340,  "line_items_per_acre": { "seed": 118.50, "fertilizer": 188.00, "crop_protection": 104.00, "irrigation": 0.00,  "crop_insurance": 18.00 } },
+    { "id": "quote_p21", "farm_id": "farm_p21", "supplier_id": "sup_mfa_sikeston",      "crop": "corn", "quote_date": "2026-03-09", "acres_covered": 260,  "line_items_per_acre": { "seed": 124.00, "fertilizer": 318.00, "crop_protection": 103.00, "irrigation": 45.00, "crop_insurance": 30.00 } },
+    { "id": "quote_p22", "farm_id": "farm_p22", "supplier_id": "sup_nutrien_caruthersville", "crop": "corn", "quote_date": "2026-03-02", "acres_covered": 580,  "line_items_per_acre": { "seed": 120.00, "fertilizer": 299.00, "crop_protection": 98.50,  "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "quote_p23", "farm_id": "farm_p23", "supplier_id": "sup_mfa_charleston",    "crop": "corn", "quote_date": "2026-03-05", "acres_covered": 460,  "line_items_per_acre": { "seed": 121.00, "fertilizer": 305.00, "crop_protection": 100.00, "irrigation": 43.50, "crop_insurance": 28.50 } },
+    { "id": "quote_p24", "farm_id": "farm_p24", "supplier_id": "sup_mfa_dexter",        "crop": "corn", "quote_date": "2026-03-07", "acres_covered": 370,  "line_items_per_acre": { "seed": 122.50, "fertilizer": 309.00, "crop_protection": 101.50, "irrigation": 43.00, "crop_insurance": 29.00 } },
+    { "id": "quote_p25", "farm_id": "farm_p25", "supplier_id": "sup_nutrien_caruthersville", "crop": "corn", "quote_date": "2026-02-26", "acres_covered": 910,  "line_items_per_acre": { "seed": 118.00, "fertilizer": 290.00, "crop_protection": 97.00,  "irrigation": 42.50, "crop_insurance": 27.50 } },
+    { "id": "quote_p26", "farm_id": "farm_p26", "supplier_id": "sup_chs_sikeston",      "crop": "corn", "quote_date": "2026-03-10", "acres_covered": 510,  "line_items_per_acre": { "seed": 120.00, "fertilizer": 301.00, "crop_protection": 99.00,  "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "quote_p27", "farm_id": "farm_p27", "supplier_id": "sup_helena_kennett",    "crop": "corn", "quote_date": "2026-03-03", "acres_covered": 780,  "line_items_per_acre": { "seed": 119.50, "fertilizer": 293.00, "crop_protection": 98.00,  "irrigation": 42.50, "crop_insurance": 27.50 } },
+    { "id": "quote_p28", "farm_id": "farm_p28", "supplier_id": "sup_helena_kennett",    "crop": "corn", "quote_date": "2026-03-11", "acres_covered": 440,  "line_items_per_acre": { "seed": 121.50, "fertilizer": 310.00, "crop_protection": 102.00, "irrigation": 44.00, "crop_insurance": 29.00 } },
+    { "id": "quote_p29", "farm_id": "farm_p29", "supplier_id": "sup_mfa_charleston",    "crop": "corn", "quote_date": "2026-03-01", "acres_covered": 620,  "line_items_per_acre": { "seed": 120.50, "fertilizer": 300.00, "crop_protection": 99.50,  "irrigation": 43.50, "crop_insurance": 28.50 } },
+    { "id": "quote_p30", "farm_id": "farm_p30", "supplier_id": "sup_mfa_dexter",        "crop": "corn", "quote_date": "2026-03-08", "acres_covered": 300,  "line_items_per_acre": { "seed": 119.00, "fertilizer": 192.00, "crop_protection": 103.00, "irrigation": 0.00,  "crop_insurance": 18.50 } }
+  ],
+
+  "paid_prices": [
+    { "id": "paid_p01", "farm_id": "farm_p01", "quote_id": "quote_p01", "crop": "corn", "signed_at": "2026-03-14", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 121.00, "fertilizer": 308.00, "crop_protection": 96.00,  "irrigation": 43.50, "crop_insurance": 28.00 } },
+    { "id": "paid_p02", "farm_id": "farm_p02", "quote_id": "quote_p02", "crop": "corn", "signed_at": "2026-03-05", "outcome": "signed_different",   "paid_per_acre": { "seed": 119.50, "fertilizer": 292.00, "crop_protection": 99.50,  "irrigation": 44.00, "crop_insurance": 28.50 }, "note": "Negotiated fertilizer down $6/acre" },
+    { "id": "paid_p03", "farm_id": "farm_p03", "quote_id": "quote_p03", "crop": "corn", "signed_at": "2026-03-12", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 122.50, "fertilizer": 295.00, "crop_protection": 101.00, "irrigation": 42.50, "crop_insurance": 29.00 } },
+    { "id": "paid_p04", "farm_id": "farm_p04", "quote_id": "quote_p04", "crop": "corn", "signed_at": "2026-03-15", "outcome": "signed_different",   "paid_per_acre": { "seed": 123.00, "fertilizer": 302.00, "crop_protection": 102.00, "irrigation": 44.50, "crop_insurance": 30.00 } },
+    { "id": "paid_p05", "farm_id": "farm_p05", "quote_id": "quote_p05", "crop": "corn", "signed_at": "2026-03-08", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 118.00, "fertilizer": 302.00, "crop_protection": 100.00, "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "paid_p06", "farm_id": "farm_p06", "quote_id": "quote_p06", "crop": "corn", "signed_at": "2026-03-02", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 117.50, "fertilizer": 289.00, "crop_protection": 97.50,  "irrigation": 42.00, "crop_insurance": 27.50 } },
+    { "id": "paid_p07", "farm_id": "farm_p07", "quote_id": "quote_p07", "crop": "corn", "signed_at": "2026-03-11", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 120.00, "fertilizer": 294.00, "crop_protection": 98.00,  "irrigation": 43.50, "crop_insurance": 28.00 } },
+    { "id": "paid_p08", "farm_id": "farm_p08", "quote_id": "quote_p08", "crop": "corn", "signed_at": "2026-03-13", "outcome": "signed_different",   "paid_per_acre": { "seed": 124.00, "fertilizer": 304.00, "crop_protection": 103.00, "irrigation": 45.00, "crop_insurance": 29.50 }, "note": "Pushed fertilizer down $7" },
+    { "id": "paid_p09", "farm_id": "farm_p09", "quote_id": "quote_p09", "crop": "corn", "signed_at": "2026-03-16", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 122.00, "fertilizer": 306.00, "crop_protection": 99.00,  "irrigation": 43.00, "crop_insurance": 28.50 } },
+    { "id": "paid_p10", "farm_id": "farm_p10", "quote_id": "quote_p10", "crop": "corn", "signed_at": "2026-03-10", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 118.50, "fertilizer": 287.00, "crop_protection": 96.00,  "irrigation": 42.50, "crop_insurance": 27.50 } },
+    { "id": "paid_p11", "farm_id": "farm_p11", "quote_id": "quote_p11", "crop": "corn", "signed_at": null, "outcome": "did_not_sign", "switched_to_supplier_id": "sup_chs_sikeston", "note": "Found better fertilizer pricing at CHS" },
+    { "id": "paid_p12", "farm_id": "farm_p12", "quote_id": "quote_p12", "crop": "corn", "signed_at": "2026-03-06", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 119.00, "fertilizer": 285.00, "crop_protection": 95.50,  "irrigation": 0.00,  "crop_insurance": 27.00 } },
+    { "id": "paid_p13", "farm_id": "farm_p13", "quote_id": "quote_p13", "crop": "corn", "signed_at": "2026-03-15", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 121.00, "fertilizer": 303.00, "crop_protection": 100.00, "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "paid_p14", "farm_id": "farm_p14", "quote_id": "quote_p14", "crop": "corn", "signed_at": "2026-03-14", "outcome": "signed_different",   "paid_per_acre": { "seed": 122.50, "fertilizer": 288.00, "crop_protection": 99.00,  "irrigation": 0.00,  "crop_insurance": 28.50 }, "note": "Dropped fertilizer $4 after walking quote" },
+    { "id": "paid_p15", "farm_id": "farm_p15", "quote_id": "quote_p15", "crop": "corn", "signed_at": "2026-02-28", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 116.50, "fertilizer": 281.00, "crop_protection": 94.50,  "irrigation": 41.50, "crop_insurance": 27.00 } },
+    { "id": "paid_p16", "farm_id": "farm_p16", "quote_id": "quote_p16", "crop": "corn", "signed_at": "2026-03-05", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 120.50, "fertilizer": 296.00, "crop_protection": 98.50,  "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "paid_p17", "farm_id": "farm_p17", "quote_id": "quote_p17", "crop": "corn", "signed_at": "2026-03-09", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 119.00, "fertilizer": 291.00, "crop_protection": 97.00,  "irrigation": 42.50, "crop_insurance": 27.50 } },
+    { "id": "paid_p18", "farm_id": "farm_p18", "quote_id": "quote_p18", "crop": "corn", "signed_at": "2026-03-14", "outcome": "signed_different",   "paid_per_acre": { "seed": 122.00, "fertilizer": 298.00, "crop_protection": 101.00, "irrigation": 43.50, "crop_insurance": 28.50 } },
+    { "id": "paid_p19", "farm_id": "farm_p19", "quote_id": "quote_p19", "crop": "corn", "signed_at": null, "outcome": "did_not_sign", "switched_to_supplier_id": "sup_nutrien_caruthersville" },
+    { "id": "paid_p20", "farm_id": "farm_p20", "quote_id": "quote_p20", "crop": "corn", "signed_at": "2026-03-10", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 118.50, "fertilizer": 188.00, "crop_protection": 104.00, "irrigation": 0.00,  "crop_insurance": 18.00 } },
+    { "id": "paid_p22", "farm_id": "farm_p22", "quote_id": "quote_p22", "crop": "corn", "signed_at": "2026-03-06", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 120.00, "fertilizer": 299.00, "crop_protection": 98.50,  "irrigation": 43.00, "crop_insurance": 28.00 } },
+    { "id": "paid_p23", "farm_id": "farm_p23", "quote_id": "quote_p23", "crop": "corn", "signed_at": "2026-03-09", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 121.00, "fertilizer": 305.00, "crop_protection": 100.00, "irrigation": 43.50, "crop_insurance": 28.50 } },
+    { "id": "paid_p25", "farm_id": "farm_p25", "quote_id": "quote_p25", "crop": "corn", "signed_at": "2026-03-04", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 118.00, "fertilizer": 290.00, "crop_protection": 97.00,  "irrigation": 42.50, "crop_insurance": 27.50 } },
+    { "id": "paid_p27", "farm_id": "farm_p27", "quote_id": "quote_p27", "crop": "corn", "signed_at": "2026-03-08", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 119.50, "fertilizer": 293.00, "crop_protection": 98.00,  "irrigation": 42.50, "crop_insurance": 27.50 } },
+    { "id": "paid_p29", "farm_id": "farm_p29", "quote_id": "quote_p29", "crop": "corn", "signed_at": "2026-03-07", "outcome": "signed_at_quoted",   "paid_per_acre": { "seed": 120.50, "fertilizer": 300.00, "crop_protection": 99.50,  "irrigation": 43.50, "crop_insurance": 28.50 } }
+  ],
+
+  "peer_benchmarks_aggregated": {
+    "region": "Southeast Missouri",
+    "crop": "corn",
+    "production_system": "furrow-irrigated",
+    "radius_miles": 60,
+    "as_of": "2026-03-15",
+    "demo_farm_id": "farm_mueller",
+    "demo_farm_distance_miles_max": 60,
+    "peer_farm_count_in_radius": 28,
+    "min_group_size_for_display": 5,
+
+    "by_category": {
+      "seed": {
+        "your_quote_per_acre": 125.00,
+        "peer_quoted": { "n": 28, "median": 120.50, "p25": 118.50, "p75": 122.50, "min": 116.50, "max": 125.50 },
+        "peer_paid":   { "n": 22, "median": 120.00, "p25": 118.50, "p75": 122.00, "min": 116.50, "max": 124.00 },
+        "mu_extension_reference": 119.25,
+        "your_percentile_vs_peer_paid": 52,
+        "status": "in_line",
+        "status_color": "green"
+      },
+      "fertilizer": {
+        "your_quote_per_acre": 360.00,
+        "peer_quoted": { "n": 28, "median": 301.00, "p25": 292.50, "p75": 308.50, "min": 281.00, "max": 318.00 },
+        "peer_paid":   { "n": 22, "median": 295.50, "p25": 289.00, "p75": 303.00, "min": 281.00, "max": 308.00 },
+        "mu_extension_reference": 303.15,
+        "your_percentile_vs_peer_paid": 78,
+        "gap_vs_peer_median_per_acre": 64.50,
+        "gap_vs_mu_reference_per_acre": 56.85,
+        "gap_vs_peer_median_full_operation": 38700,
+        "status": "expensive",
+        "status_color": "red",
+        "demo_rounding_note": "Verdict copy rounds peer median to $305 and dollar impact to $33,000 for plain-English presentation."
+      },
+      "crop_protection": {
+        "your_quote_per_acre": 98.00,
+        "peer_quoted": { "n": 28, "median": 99.25, "p25": 97.50, "p75": 101.50, "min": 94.50, "max": 104.00 },
+        "peer_paid":   { "n": 22, "median": 99.00, "p25": 97.25, "p75": 100.50, "min": 94.50, "max": 103.00 },
+        "mu_extension_reference": 101.00,
+        "your_percentile_vs_peer_paid": 41,
+        "status": "well_priced",
+        "status_color": "green"
+      },
+      "irrigation": {
+        "your_quote_per_acre": 45.00,
+        "peer_quoted": { "n": 23, "median": 43.00, "p25": 42.50, "p75": 44.00, "min": 41.50, "max": 45.50 },
+        "peer_paid":   { "n": 18, "median": 43.00, "p25": 42.50, "p75": 43.50, "min": 41.50, "max": 45.00 },
+        "mu_extension_reference": 43.02,
+        "your_percentile_vs_peer_paid": 72,
+        "status": "average_to_slightly_high",
+        "status_color": "amber"
+      },
+      "crop_insurance": {
+        "your_quote_per_acre": 30.00,
+        "peer_quoted": { "n": 28, "median": 28.25, "p25": 27.50, "p75": 28.75, "min": 18.00, "max": 30.50 },
+        "peer_paid":   { "n": 22, "median": 28.00, "p25": 27.50, "p75": 28.50, "min": 18.00, "max": 30.00 },
+        "mu_extension_reference": 28.00,
+        "your_percentile_vs_peer_paid": 80,
+        "status": "average_to_slightly_high",
+        "status_color": "amber"
+      }
+    }
+  },
+
+  "verdicts": [
+    {
+      "id": "verdict_tom_mfa_2026_03",
+      "quote_id": "quote_tom_mfa_2026_03",
+      "farm_id": "farm_mueller",
+      "computed_at": "2026-03-15T19:42:18-05:00",
+      "verdict": "NEGOTIABLE",
+      "color": "amber",
+      "headline": "Push back on fertilizer before signing.",
+      "estimated_overpayment_dollars": 33000,
+      "estimated_overpayment_acres": 600,
+      "estimated_overpayment_per_acre": 55.00,
+      "narrative_summary": "Your seed and crop protection prices are right in line with what neighboring farms are paying. The fertilizer line is where the gap is — your quote sits at the 78th percentile of similar SE Missouri farms and is $55/acre above both the regional peer median and the MU Extension 2026 reference. That's roughly a $33,000 gap across 600 acres. The most common reason we see this gap is nitrogen timing — quotes built before the late-February urea move tend to land in the high end. Worth asking your MFA rep whether the urea + UAN line can be re-quoted at this week's prices.",
+      "why_panel": {
+        "primary_finding": {
+          "category": "fertilizer",
+          "your_per_acre": 360.00,
+          "peer_paid_median_per_acre": 305.00,
+          "peer_paid_n": 28,
+          "peer_paid_radius_miles": 60,
+          "mu_extension_per_acre": 303.15,
+          "mu_extension_citation": "MU Extension g658, SE MO Corn Planning Budget 2026",
+          "gap_per_acre": 55.00,
+          "gap_full_operation": 33000,
+          "status_color": "red"
+        },
+        "in_range": [
+          {
+            "category": "seed",
+            "label": "Seed",
+            "your_per_acre": 125.00,
+            "percentile": 52,
+            "commentary": "In line with peers",
+            "status_color": "green"
+          },
+          {
+            "category": "crop_protection",
+            "label": "Crop protection",
+            "your_per_acre": 98.00,
+            "percentile": 41,
+            "commentary": "Below median — well-priced",
+            "status_color": "green"
+          }
+        ],
+        "amber_items": [
+          {
+            "category": "irrigation",
+            "label": "Irrigation",
+            "your_per_acre": 45.00,
+            "percentile": 72,
+            "commentary": "Slightly above median ($43), not material",
+            "status_color": "amber"
+          },
+          {
+            "category": "crop_insurance",
+            "label": "Crop insurance",
+            "your_per_acre": 30.00,
+            "percentile": 80,
+            "commentary": "$2/acre above peer median — likely a coverage-level difference, not a pricing issue",
+            "status_color": "amber"
+          }
+        ]
+      },
+      "verdict_tiles": [
+        { "label": "YOUR FERTILIZER", "value": "$360/acre",   "subline": "78th percentile",     "tint": "red" },
+        { "label": "PEER MEDIAN",     "value": "$305/acre",   "subline": "28 farms, 60 mi",     "tint": "neutral" },
+        { "label": "MU EXTENSION 2026","value": "$303.15/acre","subline": "SE MO Corn Budget",   "tint": "neutral" }
+      ],
+      "recommended_actions": [
+        "Ask MFA to re-quote the urea + UAN line at this week's prices.",
+        "Get a parallel quote from CHS Sikeston — three peers within 15 miles signed there at $295–$302/acre.",
+        "If the rep won't move on fertilizer, ask for a credit on crop insurance to net out the gap."
+      ]
+    }
+  ],
+
+  "verdict_rules": {
+    "fair": {
+      "color": "green",
+      "criteria": "All categories within ~5% of both benchmarks; total gap under $5,000 operation-wide.",
+      "action_copy": "You're priced in line with the regional market. Sign with confidence."
+    },
+    "negotiable": {
+      "color": "amber",
+      "criteria": "1-2 line items meaningfully over benchmarks, OR $5,000-$15,000 total gap.",
+      "action_copy": "Push back on specific items before signing. Potential savings: $X."
+    },
+    "overpriced": {
+      "color": "clay_red",
+      "criteria": "3+ line items high, OR more than $15,000 total gap.",
+      "action_copy": "Don't sign as written. Renegotiate before committing."
+    },
+    "percentile_thresholds": {
+      "green": "below peer median",
+      "amber": "between peer median and 75th percentile",
+      "red": "above 75th percentile"
+    }
+  },
+
+  "scenarios": {
+    "demo_default": {
+      "id": "scenario_tom_default",
+      "quote_id": "quote_tom_mfa_2026_03",
+      "farm_id": "farm_mueller",
+      "crop": "corn",
+      "acres": 600,
+      "expected_yield_bu_per_acre": 220,
+      "expected_corn_price_per_bu": 4.40,
+      "quoted_total_cost_per_acre": 658.00,
+      "if_negotiated_to_peer_median_total_per_acre": 603.00,
+      "baseline_margin_full_operation": 87420,
+      "downside_alert_threshold": 0,
+      "amber_band_max": 50000,
+      "messages": {
+        "negative": "At these levels, you cannot cover operating costs. Consider revisiting input commitments before signing.",
+        "connection_to_verdict": "This projection uses your quoted costs. If you can negotiate fertilizer down to the regional median, you'd add $33,000 to your margin at every scenario."
+      },
+      "sliders": {
+        "corn_price_per_bu": { "default": 4.40, "min": 3.00, "max": 5.50, "step": 0.05 },
+        "yield_vs_expected_pct": { "default": 100, "min": 70, "max": 115, "step": 1 }
+      },
+      "sample_points": [
+        { "corn_price": 4.40, "yield_pct": 100, "projected_margin_full_operation": 87420 },
+        { "corn_price": 4.00, "yield_pct": 100, "projected_margin_full_operation": 34620 },
+        { "corn_price": 3.80, "yield_pct": 90,  "projected_margin_full_operation": -28400 },
+        { "corn_price": 3.50, "yield_pct": 85,  "projected_margin_full_operation": -71200 },
+        { "corn_price": 3.00, "yield_pct": 80,  "projected_margin_full_operation": -125600 }
+      ]
+    }
+  },
+
+  "lender_reports": [
+    {
+      "id": "report_tom_2026_03",
+      "verdict_id": "verdict_tom_mfa_2026_03",
+      "farm_id": "farm_mueller",
+      "generated_at": "2026-03-15T19:48:00-05:00",
+      "title": "SHOWLINE COST ANALYSIS",
+      "subtitle": "Mueller Family Farms — March 2026",
+      "verdict_line": "Verdict: NEGOTIABLE — estimated $33,000 overpayment across 600 corn acres",
+      "share_link_token": "sl_8f3a2b1c9d4e",
+      "share_link_expires_at": "2026-04-14T19:48:00-05:00",
+      "delivery": {
+        "email_to": "kwhitfield@heartlandfc.example",
+        "method_used": "email_with_pdf_attachment"
+      },
+      "summary_sentences": [
+        "Three of five cost lines on this quote are in line with the regional market; fertilizer is $55/acre above both peer paid prices and the MU Extension 2026 reference.",
+        "Negotiating fertilizer to the regional median would add roughly $33,000 to Mueller Family Farms' projected margin without changing any other operating assumption."
+      ]
+    }
+  ],
+
+  "post_contract_followups": [
+    {
+      "id": "fu_tom_mfa_2026_03",
+      "quote_id": "quote_tom_mfa_2026_03",
+      "farm_id": "farm_mueller",
+      "sent_at": "2026-03-29T08:00:00-05:00",
+      "reminder_sent_at": "2026-04-05T08:00:00-05:00",
+      "max_reminders": 1,
+      "status": "pending",
+      "question_text": "Did you sign your March fertilizer quote? What was the final per-acre price?",
+      "options": [
+        { "key": "signed_at_quoted",   "label": "Signed at the quoted price ($360/acre)" },
+        { "key": "signed_different",   "label": "Signed at a different price", "requires_value": "final_per_acre_dollars" },
+        { "key": "did_not_sign",       "label": "Didn't sign — went somewhere else", "optional_value": "alternate_supplier_and_reason" }
+      ]
+    }
+  ],
+
+  "privacy_policy": {
+    "version": "2026.1",
+    "principles": [
+      "Your name never appears on any other farmer's screen.",
+      "Your farm's exact location is never shared — coordinates are jittered 1-2 miles before any peer sees them.",
+      "You're never the only farm in a benchmark — minimum group size is 5.",
+      "You can opt out of peer contribution any time with one toggle. Your own analyses still work.",
+      "Showline never sells, shares, or licenses your data to input suppliers, co-ops, or lenders.",
+      "You can delete your data at any time."
+    ],
+    "min_group_size_for_display": 5,
+    "gps_jitter_miles_min": 1,
+    "gps_jitter_miles_max": 2,
+    "no_commercial_ties_with": ["input suppliers", "co-ops", "lenders"],
+    "funded_by": ["farmer subscriptions", "extension partnerships"]
+  },
+
+  "ui_strings": {
+    "welcome_greeting": "Welcome back, Tom.",
+    "welcome_subline": "Mueller Family Farms — 1,200 acres in Scott County, MO.",
+    "empty_state": "You haven't analyzed a 2026 quote yet. Upload your co-op quote and Sarah will tell you whether it's a fair price.",
+    "primary_cta": "Upload a quote",
+    "secondary_cta": "Talk to Sarah instead",
+    "privacy_pill": "No commercial ties to input suppliers.",
+    "upload_helper": "Most farmers upload directly from their MFA or co-op email. Photos of paper quotes work too.",
+    "sarah_reading": "Reading your quote… this takes about 5 seconds.",
+    "sarah_confirmation_intro": "I read your quote. Here's what I pulled out — make sure I got it right before I run the analysis.",
+    "map_legend_privacy": "Peer locations jittered by 1–2 miles for privacy. Comparing 28 farms within 60 miles, similar soil and scale.",
+    "offline_tiles_banner": "Offline tiles — last updated yesterday.",
+    "followup_push": "Showline: Quick question about that MFA fertilizer quote — did you end up signing?"
+  }
+}
